@@ -130,7 +130,7 @@ a:hover {
     background-image:
         url("images/808614353_39014357011495834_3129665.jpg");
 
-    background-size: cover;
+    background-size: contain;
 
     background-position: 50% 50%;
     background-repeat: no-repeat;
