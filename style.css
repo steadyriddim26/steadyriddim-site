@@ -1,5 +1,11 @@
 /* =========================================================
-   STEADY RIDDIM — STYLE
+   STEADY RIDDIM
+   LOVE SOUND & DISTORTION
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
    ========================================================= */
 
 * {
@@ -15,9 +21,12 @@ html {
 body {
   background: #050505;
   color: #f2f2f2;
+
   font-family: Arial, Helvetica, sans-serif;
+
   overflow-x: hidden;
 }
+
 
 /* =========================================================
    HEADER
@@ -25,31 +34,37 @@ body {
 
 .site-header {
   position: fixed;
+
   top: 0;
   left: 0;
+
   width: 100%;
   height: 72px;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   padding: 18px 35px;
 
   z-index: 1000;
 
   background: rgba(5, 5, 5, 0.82);
+
   backdrop-filter: blur(10px);
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  border-bottom:
+    1px solid rgba(255, 255, 255, 0.10);
 }
 
+
 /* =========================================================
-   LOGO — FIXED SIZE
+   LOGO
    ========================================================= */
 
 .logo {
   display: flex;
+
   align-items: center;
   justify-content: flex-start;
 
@@ -57,9 +72,11 @@ body {
   height: 24px;
 
   flex-shrink: 0;
+
   overflow: hidden;
 
   position: relative;
+
   z-index: 1001;
 }
 
@@ -73,11 +90,14 @@ body {
   max-height: 22px;
 
   object-fit: contain;
+
   object-position: left center;
 
   position: relative;
+
   z-index: 1002;
 }
+
 
 /* =========================================================
    NAVIGATION
@@ -85,6 +105,7 @@ body {
 
 .main-nav {
   display: flex;
+
   align-items: center;
   justify-content: flex-end;
 
@@ -93,12 +114,15 @@ body {
 
 .main-nav a {
   color: #ffffff;
+
   text-decoration: none;
 
   font-size: 12px;
+
   font-weight: 700;
 
   letter-spacing: 1.5px;
+
   text-transform: uppercase;
 
   transition: opacity 0.25s ease;
@@ -108,6 +132,7 @@ body {
   opacity: 0.55;
 }
 
+
 /* =========================================================
    HERO
    ========================================================= */
@@ -116,14 +141,20 @@ body {
   position: relative;
 
   width: 100%;
+
   min-height: 100vh;
 
   display: flex;
+
   align-items: center;
 
-  background-image: url("images/steadyfix.jpeg");
+  background-image:
+    url("images/steadyfix.jpeg");
+
   background-size: cover;
+
   background-position: center;
+
   background-repeat: no-repeat;
 
   overflow: hidden;
@@ -131,6 +162,7 @@ body {
 
 .hero-overlay {
   position: absolute;
+
   inset: 0;
 
   background:
@@ -144,19 +176,26 @@ body {
 
 .hero-content {
   position: relative;
+
   z-index: 2;
 
   width: 100%;
-  padding: 120px 8% 80px;
+
+  padding:
+    120px
+    8%
+    80px;
 }
 
 .eyebrow {
   margin-bottom: 25px;
 
   font-size: 13px;
+
   font-weight: 700;
 
   letter-spacing: 4px;
+
   text-transform: uppercase;
 
   opacity: 0.75;
@@ -165,9 +204,18 @@ body {
 .hero-text h1 {
   margin-bottom: 25px;
 
-  font-family: "Bebas Neue", Impact, sans-serif;
+  font-family:
+    "Bebas Neue",
+    Impact,
+    sans-serif;
 
-  font-size: clamp(90px, 15vw, 220px);
+  font-size:
+    clamp(
+      90px,
+      15vw,
+      220px
+    );
+
   line-height: 0.78;
 
   text-transform: uppercase;
@@ -184,8 +232,11 @@ body {
 .hero-text .riddim {
   color: transparent;
 
-  -webkit-text-stroke: 2px #ffffff;
-  text-stroke: 2px #ffffff;
+  -webkit-text-stroke:
+    2px #ffffff;
+
+  text-stroke:
+    2px #ffffff;
 }
 
 .hero-description {
@@ -194,14 +245,17 @@ body {
   margin-bottom: 30px;
 
   font-size: 14px;
+
   line-height: 1.6;
 
   letter-spacing: 3px;
+
   text-transform: uppercase;
 }
 
 .hero-links {
   display: flex;
+
   gap: 25px;
 }
 
@@ -211,11 +265,13 @@ body {
   text-decoration: none;
 
   font-size: 12px;
+
   font-weight: 700;
 
   letter-spacing: 2px;
 
-  border-bottom: 1px solid #ffffff;
+  border-bottom:
+    1px solid #ffffff;
 
   padding-bottom: 5px;
 
@@ -226,8 +282,10 @@ body {
 
 .hero-links a:hover {
   opacity: 0.55;
+
   padding-left: 5px;
 }
+
 
 /* =========================================================
    GENERAL IMAGE SECTIONS
@@ -237,13 +295,17 @@ body {
   position: relative;
 
   width: 100%;
+
   min-height: 100vh;
 
   display: flex;
+
   align-items: center;
 
   background-size: cover;
+
   background-position: center;
+
   background-repeat: no-repeat;
 
   overflow: hidden;
@@ -251,6 +313,7 @@ body {
 
 .section-overlay {
   position: absolute;
+
   inset: 0;
 
   background:
@@ -264,20 +327,25 @@ body {
 
 .section-content {
   position: relative;
+
   z-index: 2;
 
   width: 100%;
-  max-width: 1100px;
+
+  max-width: 1200px;
 
   margin: 0 auto;
 
-  padding: 120px 8%;
+  padding:
+    120px
+    8%;
 }
 
 .section-label {
   margin-bottom: 25px;
 
   font-size: 11px;
+
   font-weight: 700;
 
   letter-spacing: 4px;
@@ -288,9 +356,17 @@ body {
 .section-content h2 {
   margin-bottom: 30px;
 
-  font-family: "Bebas Neue", Impact, sans-serif;
+  font-family:
+    "Bebas Neue",
+    Impact,
+    sans-serif;
 
-  font-size: clamp(70px, 11vw, 150px);
+  font-size:
+    clamp(
+      70px,
+      11vw,
+      150px
+    );
 
   line-height: 0.82;
 
@@ -303,33 +379,41 @@ body {
   margin-bottom: 30px;
 
   font-size: 16px;
+
   line-height: 1.7;
 
-  color: rgba(255, 255, 255, 0.85);
+  color:
+    rgba(255, 255, 255, 0.85);
 }
 
+
 /* =========================================================
-   MUSIC / BASS CULTURE
+   MUSIC
    ========================================================= */
 
 .music-section {
-  background-image: url("images/bassculture.jpeg");
+  background-image:
+    url("images/bassculture.jpeg");
 }
+
 
 /* =========================================================
    LIVE DUB
    ========================================================= */
 
 .live-dub-section {
-  background-image: url("images/live-dub.jpeg");
+  background-image:
+    url("images/live-dub.jpeg");
 }
+
 
 /* =========================================================
    RELEASES
    ========================================================= */
 
 .releases-section {
-  background-image: url("images/netlabel.jpeg");
+  background-image:
+    url("images/netlabel.jpeg");
 
   min-height: 90vh;
 }
@@ -337,28 +421,33 @@ body {
 .release-grid {
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:
+    repeat(3, 1fr);
 
-  gap: 15px;
+  gap: 20px;
 
-  max-width: 900px;
+  width: 100%;
+
+  max-width: 1100px;
 
   margin-top: 40px;
 }
 
 .release-card {
-  min-height: 130px;
+  min-width: 0;
 
   display: flex;
-  flex-direction: column;
 
-  justify-content: space-between;
+  flex-direction: column;
 
   padding: 20px;
 
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.25);
 
-  background: rgba(0, 0, 0, 0.45);
+  background:
+    rgba(0, 0, 0, 0.60);
 
   backdrop-filter: blur(5px);
 
@@ -368,24 +457,116 @@ body {
 }
 
 .release-card:hover {
-  background: rgba(255, 255, 255, 0.10);
+  background:
+    rgba(255, 255, 255, 0.08);
 
-  transform: translateY(-5px);
+  transform:
+    translateY(-4px);
 }
 
-.release-card span {
+
+/* RELEASE NUMBER */
+
+.release-number {
+  margin-bottom: 8px;
+
   font-size: 10px;
 
   letter-spacing: 2px;
 
-  opacity: 0.6;
+  opacity: 0.55;
 }
 
-.release-card strong {
+
+/* RELEASE TITLE */
+
+.release-title {
+  margin-bottom: 15px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   BANDCAMP PLAYER
+   ========================================================= */
+
+.bandcamp-player {
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #111111;
+}
+
+.bandcamp-player iframe {
+  display: block;
+
+  width: 100%;
+
+  height: 470px;
+
+  border: 0;
+}
+
+
+/* BANDCAMP LINK */
+
+.bandcamp-link {
+  display: inline-block;
+
+  margin-top: 15px;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  opacity: 0.75;
+
+  transition:
+    opacity 0.25s ease;
+}
+
+.bandcamp-link:hover {
+  opacity: 1;
+}
+
+
+/* =========================================================
+   COMING SOON
+   ========================================================= */
+
+.release-coming-soon {
+  min-height: 180px;
+
+  justify-content:
+    space-between;
+}
+
+.release-coming-soon span {
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  opacity: 0.55;
+}
+
+.release-coming-soon strong {
   font-size: 13px;
 
   letter-spacing: 2px;
 }
+
 
 /* =========================================================
    THEOUTSIDUB
@@ -397,6 +578,7 @@ body {
   min-height: 100vh;
 
   display: flex;
+
   align-items: center;
 
   background:
@@ -418,6 +600,7 @@ body {
   content: "";
 
   position: absolute;
+
   inset: 0;
 
   opacity: 0.08;
@@ -431,18 +614,62 @@ body {
     );
 }
 
+
+/* =========================================================
+   THEOUTSIDUB — LARGE YOUTUBE VIDEO
+   ========================================================= */
+
+.outsidub-video {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 1100px;
+
+  margin-top: 45px;
+
+  aspect-ratio: 16 / 9;
+
+  background: #000000;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.20);
+
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 70px
+    rgba(0, 0, 0, 0.60);
+}
+
+.outsidub-video iframe {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: 0;
+}
+
+
 /* =========================================================
    ARCHIVE
    ========================================================= */
 
 .archive-image-section {
-  background-image: url("images/music.jpeg");
+  background-image:
+    url("images/music.jpeg");
 }
 
 .archive-grid {
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns:
+    repeat(4, 1fr);
 
   gap: 15px;
 
@@ -453,15 +680,20 @@ body {
   min-height: 130px;
 
   display: flex;
+
   flex-direction: column;
 
-  justify-content: space-between;
+  justify-content:
+    space-between;
 
   padding: 20px;
 
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.25);
 
-  background: rgba(0, 0, 0, 0.45);
+  background:
+    rgba(0, 0, 0, 0.45);
 
   backdrop-filter: blur(5px);
 
@@ -471,9 +703,11 @@ body {
 }
 
 .archive-card:hover {
-  background: rgba(255, 255, 255, 0.10);
+  background:
+    rgba(255, 255, 255, 0.10);
 
-  transform: translateY(-5px);
+  transform:
+    translateY(-5px);
 }
 
 .archive-card span {
@@ -490,6 +724,7 @@ body {
   letter-spacing: 1px;
 }
 
+
 /* =========================================================
    EVENTS
    ========================================================= */
@@ -500,6 +735,7 @@ body {
   min-height: 70vh;
 
   display: flex;
+
   align-items: center;
 
   background:
@@ -515,18 +751,24 @@ body {
 
   margin-top: 40px;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.2);
 }
 
 .event-item {
   display: flex;
 
-  justify-content: space-between;
+  justify-content:
+    space-between;
+
   align-items: center;
 
   padding: 25px 0;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom:
+    1px solid
+    rgba(255, 255, 255, 0.2);
 }
 
 .event-item span {
@@ -543,8 +785,9 @@ body {
   letter-spacing: 2px;
 }
 
+
 /* =========================================================
-   PLACEHOLDERS
+   PLACEHOLDER
    ========================================================= */
 
 .section-placeholder {
@@ -554,7 +797,9 @@ body {
 
   padding: 12px 18px;
 
-  border: 1px solid rgba(255, 255, 255, 0.30);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.30);
 
   font-size: 10px;
 
@@ -562,6 +807,7 @@ body {
 
   opacity: 0.7;
 }
+
 
 /* =========================================================
    CONTACT
@@ -571,6 +817,7 @@ body {
   min-height: 70vh;
 
   display: flex;
+
   align-items: center;
 
   background: #050505;
@@ -578,6 +825,7 @@ body {
 
 .contact-links {
   display: flex;
+
   flex-wrap: wrap;
 
   gap: 20px;
@@ -592,7 +840,9 @@ body {
 
   padding: 14px 20px;
 
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.25);
 
   font-size: 11px;
 
@@ -605,8 +855,10 @@ body {
 
 .contact-links a:hover {
   background: #ffffff;
+
   color: #000000;
 }
+
 
 /* =========================================================
    FOOTER
@@ -619,7 +871,9 @@ body {
 
   background: #000000;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  border-top:
+    1px solid
+    rgba(255, 255, 255, 0.10);
 }
 
 .site-footer p {
@@ -630,6 +884,7 @@ body {
   opacity: 0.45;
 }
 
+
 /* =========================================================
    TABLET
    ========================================================= */
@@ -637,7 +892,8 @@ body {
 @media (max-width: 1000px) {
 
   .site-header {
-    padding: 18px 25px;
+    padding:
+      18px 25px;
   }
 
   .logo {
@@ -664,14 +920,17 @@ body {
   }
 
   .release-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, 1fr);
   }
 
   .archive-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, 1fr);
   }
 
 }
+
 
 /* =========================================================
    MOBILE
@@ -679,13 +938,14 @@ body {
 
 @media (max-width: 700px) {
 
+  /* HEADER */
+
   .site-header {
     height: 62px;
 
-    padding: 15px 18px;
+    padding:
+      15px 18px;
   }
-
-  /* MOBILE LOGO */
 
   .logo {
     width: 48px;
@@ -704,22 +964,23 @@ body {
     object-fit: contain;
   }
 
-  /* HIDE DESKTOP NAV */
-
   .main-nav {
     display: none;
   }
+
 
   /* HERO */
 
   .hero {
     min-height: 100svh;
 
-    background-position: center center;
+    background-position:
+      center center;
   }
 
   .hero-content {
-    padding: 100px 25px 60px;
+    padding:
+      100px 25px 60px;
   }
 
   .eyebrow {
@@ -731,14 +992,22 @@ body {
   }
 
   .hero-text h1 {
-    font-size: clamp(75px, 22vw, 130px);
+    font-size:
+      clamp(
+        75px,
+        22vw,
+        130px
+      );
 
     line-height: 0.82;
   }
 
   .hero-text .riddim {
-    -webkit-text-stroke: 1px #ffffff;
-    text-stroke: 1px #ffffff;
+    -webkit-text-stroke:
+      1px #ffffff;
+
+    text-stroke:
+      1px #ffffff;
   }
 
   .hero-description {
@@ -748,6 +1017,7 @@ body {
 
     max-width: 330px;
   }
+
 
   /* GENERAL SECTIONS */
 
@@ -759,7 +1029,8 @@ body {
   }
 
   .section-content {
-    padding: 100px 25px 60px;
+    padding:
+      100px 25px 60px;
   }
 
   .section-label {
@@ -771,7 +1042,12 @@ body {
   }
 
   .section-content h2 {
-    font-size: clamp(65px, 20vw, 110px);
+    font-size:
+      clamp(
+        65px,
+        20vw,
+        110px
+      );
 
     margin-bottom: 25px;
   }
@@ -782,26 +1058,52 @@ body {
     line-height: 1.6;
   }
 
+
   /* RELEASES */
 
   .release-grid {
     grid-template-columns: 1fr;
 
-    gap: 10px;
+    gap: 15px;
 
     margin-top: 30px;
   }
 
   .release-card {
-    min-height: 100px;
-
-    padding: 16px;
+    width: 100%;
   }
+
+  .release-card-bandcamp {
+    padding: 15px;
+  }
+
+  .bandcamp-player iframe {
+    height: 470px;
+  }
+
+  .release-coming-soon {
+    min-height: 130px;
+  }
+
+
+  /* THEOUTSIDUB VIDEO */
+
+  .outsidub-video {
+    width: 100%;
+
+    max-width: none;
+
+    margin-top: 30px;
+
+    aspect-ratio: 16 / 9;
+  }
+
 
   /* ARCHIVE */
 
   .archive-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+      1fr 1fr;
 
     gap: 10px;
 
@@ -817,6 +1119,7 @@ body {
   .archive-card strong {
     font-size: 10px;
   }
+
 
   /* EVENTS */
 
@@ -838,6 +1141,7 @@ body {
     font-size: 12px;
   }
 
+
   /* CONTACT */
 
   .contact-links {
@@ -847,6 +1151,7 @@ body {
   }
 
 }
+
 
 /* =========================================================
    SMALL MOBILE
