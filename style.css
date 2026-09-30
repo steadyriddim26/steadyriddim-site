@@ -343,6 +343,16 @@ body {
   background-image: url("images/musicaaa.jpeg");
 }
 
+.soundcloud-player {
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 24px;
+}
+
+.soundcloud-player:last-child {
+  margin-bottom: 0;
+}
+
 
 /* =========================================
    LIVE DUB
