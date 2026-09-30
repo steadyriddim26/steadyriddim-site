@@ -11,394 +11,618 @@ RESET
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  }
+}
 
 html {
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-background: #050505;
-color: #f2f2f2;
-font-family: Arial, Helvetica, sans-serif;
-overflow-x: hidden;
+  background: #050505;
+  color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 a {
-color: inherit;
+  color: inherit;
 }
+
 
 /* =========================================
 HEADER
 ========================================= */
 
 .site-header {
-position: fixed;
-top: 0;
-left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
 
-width: 100%;
-height: 72px;
+  width: 100%;
+  height: 72px;
 
-display: flex;
-align-items: center;
-justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-padding: 18px 35px;
+  padding: 18px 35px;
 
-z-index: 1000;
+  z-index: 1000;
 
-background: rgba(5, 5, 5, 0.82);
+  background: rgba(5, 5, 5, 0.82);
 
-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 
-border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
+
 
 /* LOGO */
 
 .logo {
-display: flex;
-align-items: center;
-justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 
-width: 55px;
-height: 24px;
+  width: 55px;
+  height: 24px;
 
-flex-shrink: 0;
+  flex-shrink: 0;
 
-overflow: hidden;
+  overflow: hidden;
 
-position: relative;
+  position: relative;
 }
 
 .logo img {
-display: block;
+  display: block;
 
-width: 55px;
-height: 22px;
+  width: 55px;
+  height: 22px;
 
-max-width: 55px;
-max-height: 22px;
+  max-width: 55px;
+  max-height: 22px;
 
-object-fit: contain;
-object-position: left center;
+  object-fit: contain;
+  object-position: left center;
 }
+
 
 /* NAVIGATION */
 
 .main-nav {
-display: flex;
-align-items: center;
-justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 
-gap: 25px;
+  gap: 25px;
 }
 
 .main-nav a {
-color: #fff;
+  color: #fff;
 
-text-decoration: none;
+  text-decoration: none;
 
-font-size: 12px;
-font-weight: 700;
+  font-size: 12px;
+  font-weight: 700;
 
-letter-spacing: 1.5px;
+  letter-spacing: 1.5px;
 
-text-transform: uppercase;
+  text-transform: uppercase;
 
-transition: opacity 0.25s ease;
+  transition: opacity 0.25s ease;
 }
 
 .main-nav a:hover {
-opacity: 0.55;
+  opacity: 0.55;
 }
+
 
 /* =========================================
 HERO
 ========================================= */
 
 .hero {
-position: relative;
+  position: relative;
 
-width: 100%;
+  width: 100%;
 
-min-height: 100vh;
+  min-height: 100vh;
 
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 
-background-image: url("images/steadyfix.jpeg");
+  background-image: url("images/steadyfix.jpeg");
 
-background-size: cover;
+  background-size: cover;
 
-background-position: center;
+  background-position: center;
 
-background-repeat: no-repeat;
+  background-repeat: no-repeat;
 
-overflow: hidden;
+  overflow: hidden;
 }
 
 .hero-overlay {
-position: absolute;
-inset: 0;
+  position: absolute;
+  inset: 0;
 
-background:
-linear-gradient(
-90deg,
-rgba(0, 0, 0, 0.72) 0%,
-rgba(0, 0, 0, 0.40) 45%,
-rgba(0, 0, 0, 0.15) 100%
-);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.72) 0%,
+      rgba(0, 0, 0, 0.40) 45%,
+      rgba(0, 0, 0, 0.15) 100%
+    );
 }
 
 .hero-content {
-position: relative;
+  position: relative;
 
-z-index: 2;
+  z-index: 2;
 
-width: 100%;
+  width: 100%;
 
-padding: 120px 8% 80px 6%;
+  padding: 120px 8% 80px 6%;
 }
 
 .eyebrow {
-margin-bottom: 25px;
+  margin-bottom: 25px;
 
-font-size: 13px;
+  font-size: 13px;
 
-font-weight: 700;
+  font-weight: 700;
 
-letter-spacing: 4px;
+  letter-spacing: 4px;
 
-text-transform: uppercase;
+  text-transform: uppercase;
 
-opacity: 0.75;
+  opacity: 0.75;
 }
 
 .hero-text h1 {
-margin-bottom: 25px;
+  margin-bottom: 25px;
 
-font-family: "Bebas Neue", Impact, sans-serif;
+  font-family: "Bebas Neue", Impact, sans-serif;
 
-font-size: clamp(90px, 15vw, 220px);
+  font-size: clamp(90px, 15vw, 220px);
 
-line-height: 0.78;
+  line-height: 0.78;
 
-text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .hero-text h1 span {
-display: block;
+  display: block;
 }
 
 .hero-text .steady {
-color: #fff;
+  color: #fff;
 }
 
 .hero-text .riddim {
-color: transparent;
+  color: transparent;
 
--webkit-text-stroke: 2px #fff;
+  -webkit-text-stroke: 2px #fff;
 
-text-stroke: 2px #fff;
+  text-stroke: 2px #fff;
 }
 
 .hero-description {
-max-width: 600px;
+  max-width: 600px;
 
-margin-bottom: 30px;
+  margin-bottom: 30px;
 
-font-size: 14px;
+  font-size: 14px;
 
-line-height: 1.6;
+  line-height: 1.6;
 
-letter-spacing: 3px;
+  letter-spacing: 3px;
 
-text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .hero-links {
-display: flex;
+  display: flex;
 
-gap: 25px;
+  gap: 25px;
 }
 
 .hero-links a {
-color: #fff;
+  color: #fff;
 
-text-decoration: none;
+  text-decoration: none;
 
-font-size: 12px;
+  font-size: 12px;
 
-font-weight: 700;
+  font-weight: 700;
 
-letter-spacing: 2px;
+  letter-spacing: 2px;
 
-border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 
-padding-bottom: 5px;
+  padding-bottom: 5px;
 
-transition:
-opacity 0.25s ease,
-padding-left 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    padding-left 0.25s ease;
 }
 
 .hero-links a:hover {
-opacity: 0.55;
+  opacity: 0.55;
 
-padding-left: 5px;
+  padding-left: 5px;
 }
+
 
 /* =========================================
 GENERAL IMAGE SECTIONS
 ========================================= */
 
 .image-section {
-position: relative;
+  position: relative;
 
-width: 100%;
+  width: 100%;
 
-min-height: 100vh;
+  min-height: 100vh;
 
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 
-background-size: cover;
+  background-size: cover;
 
-background-position: center;
+  background-position: center;
 
-background-repeat: no-repeat;
+  background-repeat: no-repeat;
 
-overflow: hidden;
+  overflow: hidden;
 }
 
 .section-overlay {
-position: absolute;
-inset: 0;
+  position: absolute;
+  inset: 0;
 
-background:
-linear-gradient(
-90deg,
-rgba(0, 0, 0, 0.82) 0%,
-rgba(0, 0, 0, 0.50) 50%,
-rgba(0, 0, 0, 0.25) 100%
-);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.50) 50%,
+      rgba(0, 0, 0, 0.25) 100%
+    );
 }
 
 .section-content {
-position: relative;
+  position: relative;
 
-z-index: 2;
+  z-index: 2;
 
-width: 100%;
+  width: 100%;
 
-max-width: none;
+  max-width: none;
 
-margin: 0;
+  margin: 0;
 
-padding: 120px 8% 120px 6%;
+  padding: 120px 8% 120px 6%;
 }
 
 .section-label {
-margin-bottom: 25px;
+  margin-bottom: 25px;
 
-font-size: 11px;
+  font-size: 11px;
 
-font-weight: 700;
+  font-weight: 700;
 
-letter-spacing: 4px;
+  letter-spacing: 4px;
 
-color: #a51c30;
+  color: #a51c30;
 }
 
 .section-content h2 {
-margin-bottom: 30px;
+  margin-bottom: 30px;
 
-font-family: "Bebas Neue", Impact, sans-serif;
+  font-family: "Bebas Neue", Impact, sans-serif;
 
-font-size: clamp(70px, 11vw, 150px);
+  font-size: clamp(70px, 11vw, 150px);
 
-line-height: 0.82;
+  line-height: 0.82;
 
-text-transform: uppercase;
+  text-transform: uppercase;
 
-color: #fff;
+  color: #fff;
 }
 
 .section-content p {
-max-width: 560px;
+  max-width: 560px;
 
-margin-bottom: 30px;
+  margin-bottom: 30px;
 
-font-size: 16px;
+  font-size: 16px;
 
-line-height: 1.7;
+  line-height: 1.7;
 
-color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.85);
 }
+
 
 /* =========================================
 MUSIC
 ========================================= */
 
 .music-section {
-background-image: url("images/musicaau.jpeg");
+  background-image: url("images/musicaau.jpeg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
 }
+
+
+/* =========================================
+SOUNDCLOUD
+========================================= */
+
+.soundcloud-player {
+  width: 100%;
+
+  max-width: 700px;
+
+  margin-top: 35px;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+.soundcloud-player iframe {
+  display: block;
+
+  width: 100%;
+
+  max-width: 100%;
+
+  border: 0;
+}
+
 
 /* =========================================
 LIVE DUB
 ========================================= */
 
 .live-dub-section {
-background-image: url("images/live-dub.jpeg");
+  background-image: url("images/live-dub.jpeg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
 }
+
 
 /* =========================================
 RELEASES
 ========================================= */
 
 .releases-section {
-background-image: url("images/LSDRECS.jpeg");
+  background-image: url("images/LSDRECS.jpeg");
 
-min-height: 100vh;
+  min-height: 100vh;
 }
 
 .release-grid {
-display: grid;
+  display: grid;
 
-grid-template-columns:
-repeat(3, minmax(0, 360px));
+  grid-template-columns:
+    repeat(3, minmax(0, 360px));
 
-gap: 20px;
+  gap: 20px;
 
-width: 100%;
+  width: 100%;
 
-max-width: 1120px;
+  max-width: 1120px;
 
-margin-top: 40px;
+  margin-top: 40px;
 }
 
 .release-card {
-min-width: 0;
+  min-width: 0;
 
-display: flex;
-flex-direction: column;
+  display: flex;
 
-padding: 20px;
+  flex-direction: column;
 
-border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 20px;
 
-background: rgba(0, 0, 0, 0.60);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 
-backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.60);
 
-transition:
-background 0.25s ease,
-transform 0.25s ease;
+  backdrop-filter: blur(5px);
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
 }
 
 .release-card:hover {
-background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.08);
 
-transform: transl
+  transform: translateY(-5px);
+}
+
+
+/* =========================================
+THEOUTSIDUB
+========================================= */
+
+.outsidub-section {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+
+  /*
+  IMPORTANTE:
+  no usamos cover aquí porque estaba provocando
+  que la fotografía se recortara/agrandara demasiado.
+  */
+
+  background-image: url("images/theoutsidub.jpeg");
+
+  background-size: 100% auto;
+
+  background-position: center center;
+
+  background-repeat: no-repeat;
+
+  background-color: #050505;
+
+  overflow: hidden;
+}
+
+.outsidub-section .section-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.84) 0%,
+      rgba(0, 0, 0, 0.55) 50%,
+      rgba(0, 0, 0, 0.30) 100%
+    );
+}
+
+.outsidub-section .section-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+YOUTUBE
+========================================= */
+
+.youtube-container {
+  width: 100%;
+
+  max-width: 900px;
+
+  margin-top: 40px;
+
+  position: relative;
+
+  z-index: 3;
+}
+
+.youtube-container iframe {
+  display: block;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  border: 0;
+}
+
+
+/* =========================================
+RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .site-header {
+    padding: 18px 20px;
+  }
+
+  .main-nav {
+    gap: 15px;
+  }
+
+  .main-nav a {
+    font-size: 10px;
+
+    letter-spacing: 1px;
+  }
+
+  .hero-content,
+  .section-content {
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .release-grid {
+    grid-template-columns: 1fr 1fr;
+
+    max-width: 100%;
+  }
+
+  .outsidub-section {
+    background-size: auto 100%;
+
+    background-position: center center;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .site-header {
+    height: 64px;
+
+    padding: 16px 15px;
+  }
+
+  .main-nav {
+    gap: 10px;
+  }
+
+  .main-nav a {
+    font-size: 9px;
+  }
+
+  .hero-content,
+  .section-content {
+    padding: 100px 6% 80px;
+  }
+
+  .hero-text h1 {
+    font-size: clamp(70px, 20vw, 120px);
+  }
+
+  .section-content h2 {
+    font-size: clamp(60px, 17vw, 100px);
+  }
+
+  .release-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /*
+  En móvil mantenemos la fotografía completa
+  en la medida posible sin volver a hacer zoom excesivo.
+  */
+
+  .outsidub-section {
+    background-size: auto 100%;
+
+    background-position: center center;
+  }
+
+  .soundcloud-player {
+    max-width: 100%;
+  }
+
+  .youtube-container {
+    max-width: 100%;
+  }
+}
