@@ -629,6 +629,71 @@ body {
 }
 
 
+/* ARCHIVE MEDIA */
+
+.archive-card-media {
+  justify-content: flex-start;
+}
+
+.archive-card-media > strong {
+  margin-bottom: 15px;
+}
+
+.archive-embed {
+  width: 100%;
+  margin-top: 15px;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.archive-embed iframe {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+.archive-embed-mixcloud iframe {
+  width: 100%;
+  height: 120px;
+  aspect-ratio: auto;
+}
+
+.mixtape-info {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.mixtape-series {
+  margin-bottom: 10px;
+  color: #a51c30;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.mixtape-title {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.mixtape-artist {
+  margin-bottom: 15px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.mixtape-info p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+
 /* =========================================
    EVENTS / UPCOMING DUB SESSIONS
 ========================================= */
