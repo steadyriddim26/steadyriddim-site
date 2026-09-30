@@ -1,1297 +1,404 @@
 /* =========================================
-   RESET
+STEADY RIDDIM
+DIY / DUB / BASS / SOUND SYSTEM
+========================================= */
+
+/* =========================================
+RESET
 ========================================= */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+  }
 
 html {
-  scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 body {
-  background: #050505;
-  color: #f2f2f2;
-  font-family: Arial, Helvetica, sans-serif;
-  overflow-x: hidden;
+background: #050505;
+color: #f2f2f2;
+font-family: Arial, Helvetica, sans-serif;
+overflow-x: hidden;
 }
 
+a {
+color: inherit;
+}
 
 /* =========================================
-   HEADER
+HEADER
 ========================================= */
 
 .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
+position: fixed;
+top: 0;
+left: 0;
 
-  width: 100%;
-  height: 72px;
+width: 100%;
+height: 72px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+display: flex;
+align-items: center;
+justify-content: space-between;
 
-  padding: 18px 35px;
+padding: 18px 35px;
 
-  z-index: 1000;
+z-index: 1000;
 
-  background: rgba(5, 5, 5, 0.82);
+background: rgba(5, 5, 5, 0.82);
 
-  backdrop-filter: blur(10px);
+backdrop-filter: blur(10px);
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
-
 
 /* LOGO */
 
 .logo {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+display: flex;
+align-items: center;
+justify-content: flex-start;
 
-  width: 55px;
-  height: 24px;
+width: 55px;
+height: 24px;
 
-  flex-shrink: 0;
+flex-shrink: 0;
 
-  overflow: hidden;
+overflow: hidden;
 
-  position: relative;
+position: relative;
 }
 
 .logo img {
-  display: block;
+display: block;
 
-  width: 55px;
-  height: 22px;
+width: 55px;
+height: 22px;
 
-  max-width: 55px;
-  max-height: 22px;
+max-width: 55px;
+max-height: 22px;
 
-  object-fit: contain;
-  object-position: left center;
+object-fit: contain;
+object-position: left center;
 }
-
 
 /* NAVIGATION */
 
 .main-nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+display: flex;
+align-items: center;
+justify-content: flex-end;
 
-  gap: 25px;
+gap: 25px;
 }
 
 .main-nav a {
-  color: #fff;
+color: #fff;
 
-  text-decoration: none;
+text-decoration: none;
 
-  font-size: 12px;
-  font-weight: 700;
+font-size: 12px;
+font-weight: 700;
 
-  letter-spacing: 1.5px;
+letter-spacing: 1.5px;
 
-  text-transform: uppercase;
+text-transform: uppercase;
 
-  transition: opacity 0.25s ease;
+transition: opacity 0.25s ease;
 }
 
 .main-nav a:hover {
-  opacity: 0.55;
+opacity: 0.55;
 }
 
-
 /* =========================================
-   HERO
+HERO
 ========================================= */
 
 .hero {
-  position: relative;
+position: relative;
 
-  width: 100%;
+width: 100%;
 
-  min-height: 100vh;
+min-height: 100vh;
 
-  display: flex;
-  align-items: center;
+display: flex;
+align-items: center;
 
-  background-image: url("images/steadyfix.jpeg");
+background-image: url("images/steadyfix.jpeg");
 
-  background-size: cover;
+background-size: cover;
 
-  background-position: center;
+background-position: center;
 
-  background-repeat: no-repeat;
+background-repeat: no-repeat;
 
-  overflow: hidden;
+overflow: hidden;
 }
 
 .hero-overlay {
-  position: absolute;
-  inset: 0;
+position: absolute;
+inset: 0;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.72) 0%,
-      rgba(0, 0, 0, 0.40) 45%,
-      rgba(0, 0, 0, 0.15) 100%
-    );
+background:
+linear-gradient(
+90deg,
+rgba(0, 0, 0, 0.72) 0%,
+rgba(0, 0, 0, 0.40) 45%,
+rgba(0, 0, 0, 0.15) 100%
+);
 }
 
 .hero-content {
-  position: relative;
+position: relative;
 
-  z-index: 2;
+z-index: 2;
 
-  width: 100%;
+width: 100%;
 
-  padding: 120px 8% 80px 6%;
+padding: 120px 8% 80px 6%;
 }
 
 .eyebrow {
-  margin-bottom: 25px;
+margin-bottom: 25px;
 
-  font-size: 13px;
+font-size: 13px;
 
-  font-weight: 700;
+font-weight: 700;
 
-  letter-spacing: 4px;
+letter-spacing: 4px;
 
-  text-transform: uppercase;
+text-transform: uppercase;
 
-  opacity: 0.75;
+opacity: 0.75;
 }
 
 .hero-text h1 {
-  margin-bottom: 25px;
+margin-bottom: 25px;
 
-  font-family: "Bebas Neue", Impact, sans-serif;
+font-family: "Bebas Neue", Impact, sans-serif;
 
-  font-size: clamp(90px, 15vw, 220px);
+font-size: clamp(90px, 15vw, 220px);
 
-  line-height: 0.78;
+line-height: 0.78;
 
-  text-transform: uppercase;
+text-transform: uppercase;
 }
 
 .hero-text h1 span {
-  display: block;
+display: block;
 }
 
 .hero-text .steady {
-  color: #fff;
+color: #fff;
 }
 
 .hero-text .riddim {
-  color: transparent;
+color: transparent;
 
-  -webkit-text-stroke: 2px #fff;
+-webkit-text-stroke: 2px #fff;
 
-  text-stroke: 2px #fff;
+text-stroke: 2px #fff;
 }
 
 .hero-description {
-  max-width: 600px;
+max-width: 600px;
 
-  margin-bottom: 30px;
+margin-bottom: 30px;
 
-  font-size: 14px;
+font-size: 14px;
 
-  line-height: 1.6;
+line-height: 1.6;
 
-  letter-spacing: 3px;
+letter-spacing: 3px;
 
-  text-transform: uppercase;
+text-transform: uppercase;
 }
 
 .hero-links {
-  display: flex;
+display: flex;
 
-  gap: 25px;
+gap: 25px;
 }
 
 .hero-links a {
-  color: #fff;
+color: #fff;
 
-  text-decoration: none;
+text-decoration: none;
 
-  font-size: 12px;
+font-size: 12px;
 
-  font-weight: 700;
+font-weight: 700;
 
-  letter-spacing: 2px;
+letter-spacing: 2px;
 
-  border-bottom: 1px solid #fff;
+border-bottom: 1px solid #fff;
 
-  padding-bottom: 5px;
+padding-bottom: 5px;
 
-  transition:
-    opacity 0.25s ease,
-    padding-left 0.25s ease;
+transition:
+opacity 0.25s ease,
+padding-left 0.25s ease;
 }
 
 .hero-links a:hover {
-  opacity: 0.55;
+opacity: 0.55;
 
-  padding-left: 5px;
+padding-left: 5px;
 }
 
-
 /* =========================================
-   GENERAL IMAGE SECTIONS
+GENERAL IMAGE SECTIONS
 ========================================= */
 
 .image-section {
-  position: relative;
+position: relative;
 
-  width: 100%;
+width: 100%;
 
-  min-height: 100vh;
+min-height: 100vh;
 
-  display: flex;
-  align-items: center;
+display: flex;
+align-items: center;
 
-  background-size: cover;
+background-size: cover;
 
-  background-position: center;
+background-position: center;
 
-  background-repeat: no-repeat;
+background-repeat: no-repeat;
 
-  overflow: hidden;
+overflow: hidden;
 }
 
 .section-overlay {
-  position: absolute;
-  inset: 0;
+position: absolute;
+inset: 0;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.82) 0%,
-      rgba(0, 0, 0, 0.50) 50%,
-      rgba(0, 0, 0, 0.25) 100%
-    );
+background:
+linear-gradient(
+90deg,
+rgba(0, 0, 0, 0.82) 0%,
+rgba(0, 0, 0, 0.50) 50%,
+rgba(0, 0, 0, 0.25) 100%
+);
 }
 
 .section-content {
-  position: relative;
+position: relative;
 
-  z-index: 2;
+z-index: 2;
 
-  width: 100%;
+width: 100%;
 
-  max-width: none;
+max-width: none;
 
-  margin: 0;
+margin: 0;
 
-  padding: 120px 8% 120px 6%;
+padding: 120px 8% 120px 6%;
 }
 
 .section-label {
-  margin-bottom: 25px;
+margin-bottom: 25px;
 
-  font-size: 11px;
+font-size: 11px;
 
-  font-weight: 700;
+font-weight: 700;
 
-  letter-spacing: 4px;
+letter-spacing: 4px;
 
-  color: #a51c30;
+color: #a51c30;
 }
 
 .section-content h2 {
-  margin-bottom: 30px;
+margin-bottom: 30px;
 
-  font-family: "Bebas Neue", Impact, sans-serif;
+font-family: "Bebas Neue", Impact, sans-serif;
 
-  font-size: clamp(70px, 11vw, 150px);
+font-size: clamp(70px, 11vw, 150px);
 
-  line-height: 0.82;
+line-height: 0.82;
 
-  text-transform: uppercase;
+text-transform: uppercase;
 
-  color: #fff;
+color: #fff;
 }
 
 .section-content p {
-  max-width: 560px;
+max-width: 560px;
 
-  margin-bottom: 30px;
+margin-bottom: 30px;
 
-  font-size: 16px;
+font-size: 16px;
 
-  line-height: 1.7;
+line-height: 1.7;
 
-  color: rgba(255, 255, 255, 0.85);
+color: rgba(255, 255, 255, 0.85);
 }
 
-
 /* =========================================
-   MUSIC
+MUSIC
 ========================================= */
 
 .music-section {
-  background-image: url("images/musicaau.jpeg");
+background-image: url("images/musicaau.jpeg");
 }
 
-
 /* =========================================
-   LIVE DUB
+LIVE DUB
 ========================================= */
 
 .live-dub-section {
-  background-image: url("images/live-dub.jpeg");
+background-image: url("images/live-dub.jpeg");
 }
 
-
 /* =========================================
-   RELEASES
+RELEASES
 ========================================= */
 
 .releases-section {
-  background-image: url("images/LSDRECS.jpeg");
+background-image: url("images/LSDRECS.jpeg");
 
-  min-height: 100vh;
+min-height: 100vh;
 }
 
 .release-grid {
-  display: grid;
+display: grid;
 
-  grid-template-columns:
-    repeat(3, minmax(0, 360px));
+grid-template-columns:
+repeat(3, minmax(0, 360px));
 
-  gap: 20px;
+gap: 20px;
 
-  width: 100%;
+width: 100%;
 
-  max-width: 1120px;
+max-width: 1120px;
 
-  margin-top: 40px;
+margin-top: 40px;
 }
 
 .release-card {
-  min-width: 0;
+min-width: 0;
 
-  display: flex;
-  flex-direction: column;
+display: flex;
+flex-direction: column;
 
-  padding: 20px;
+padding: 20px;
 
-  border: 1px solid rgba(255, 255, 255, 0.25);
+border: 1px solid rgba(255, 255, 255, 0.25);
 
-  background: rgba(0, 0, 0, 0.60);
+background: rgba(0, 0, 0, 0.60);
 
-  backdrop-filter: blur(5px);
+backdrop-filter: blur(5px);
 
-  transition:
-    background 0.25s ease,
-    transform 0.25s ease;
+transition:
+background 0.25s ease,
+transform 0.25s ease;
 }
 
 .release-card:hover {
-  background: rgba(255, 255, 255, 0.08);
+background: rgba(255, 255, 255, 0.08);
 
-  transform: translateY(-4px);
-}
-
-.release-number {
-  margin-bottom: 8px;
-
-  font-size: 10px;
-
-  letter-spacing: 2px;
-
-  color: #a51c30;
-
-  font-weight: 700;
-}
-
-.release-title {
-  margin-bottom: 8px;
-
-  font-size: 15px;
-
-  font-weight: 700;
-
-  line-height: 1.25;
-
-  letter-spacing: 1px;
-}
-
-.release-subtitle {
-  margin-bottom: 15px;
-
-  font-size: 10px;
-
-  letter-spacing: 2px;
-
-  color: rgba(255, 255, 255, 0.55);
-}
-
-
-/* BANDCAMP */
-
-.bandcamp-player {
-  width: 100%;
-
-  overflow: hidden;
-
-  background: #111;
-
-  border: 1px solid rgba(255, 255, 255, 0.10);
-}
-
-.bandcamp-player iframe {
-  display: block;
-
-  width: 100%;
-
-  height: 470px;
-
-  border: 0;
-}
-
-.bandcamp-link {
-  display: inline-block;
-
-  margin-top: 15px;
-
-  color: #fff;
-
-  text-decoration: none;
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
-  transition:
-    color 0.25s ease,
-    opacity 0.25s ease;
-}
-
-.bandcamp-link:hover {
-  color: #a51c30;
-
-  opacity: 1;
-}
-
-
-/* =========================================
-   THEOUTSIDUB
-========================================= */
-
-.theoutsidub-section {
-  position: relative;
-
-  min-height: 100vh;
-
-  display: flex;
-  align-items: center;
-
-  background-image: url("images/outsidub.jpeg");
-
-  background-size: cover;
-
-  background-position: center;
-
-  background-repeat: no-repeat;
-
-  overflow: hidden;
-}
-
-.theoutsidub-section::before {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  opacity: 0.08;
-
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 2px,
-      rgba(255, 255, 255, 0.2) 3px
-    );
-}
-
-
-/* VIDEO */
-
-.outsidub-video {
-  position: relative;
-
-  width: 100%;
-
-  max-width: 1100px;
-
-  margin-top: 45px;
-
-  aspect-ratio: 16 / 9;
-
-  background: #000;
-
-  border: 1px solid rgba(255, 255, 255, 0.20);
-
-  overflow: hidden;
-
-  box-shadow:
-    0 25px 70px
-    rgba(0, 0, 0, 0.60);
-}
-
-.outsidub-video iframe {
-  position: absolute;
-
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  border: 0;
-}
-
-
-/* =========================================
-   ARCHIVE
-========================================= */
-
-.archive-image-section {
-  background-image: url("images/music.jpeg");
-}
-
-.archive-grid {
-  display: grid;
-
-  grid-template-columns:
-    repeat(4, 1fr);
-
-  gap: 15px;
-
-  margin-top: 40px;
-
-  max-width: 900px;
-}
-
-.archive-card {
-  min-height: 130px;
-
-  display: flex;
-  flex-direction: column;
-
-  justify-content: space-between;
-
-  padding: 20px;
-
-  border: 1px solid rgba(255, 255, 255, 0.25);
-
-  background: rgba(0, 0, 0, 0.45);
-
-  backdrop-filter: blur(5px);
-
-  transition:
-    background 0.25s ease,
-    transform 0.25s ease;
-}
-
-.archive-card:hover {
-  background: rgba(255, 255, 255, 0.10);
-
-  transform: translateY(-5px);
-}
-
-.archive-card span {
-  font-size: 11px;
-
-  letter-spacing: 2px;
-
-  color: #a51c30;
-}
-
-.archive-card strong {
-  font-size: 13px;
-
-  letter-spacing: 1px;
-}
-
-
-/* =========================================
-   EVENTS / UPCOMING DUB SESSIONS
-========================================= */
-
-.events-section {
-  position: relative;
-
-  min-height: 100vh;
-
-  display: flex;
-  align-items: center;
-
-  background:
-    linear-gradient(
-      135deg,
-      #0d0d0d,
-      #030303
-    );
-
-  overflow: hidden;
-}
-
-
-/*
-   IMPORTANT:
-   Keep the section title white.
-*/
-
-.events-section h2 {
-  color: #fff;
-}
-
-
-/* EVENT FEATURE */
-
-.event-feature {
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 1fr)
-    minmax(0, 1fr);
-
-  width: 100%;
-
-  max-width: 1100px;
-
-  margin-top: 45px;
-
-  border: 1px solid rgba(255, 255, 255, 0.22);
-
-  background: rgba(0, 0, 0, 0.55);
-
-  overflow: hidden;
-
-  box-shadow:
-    0 25px 70px
-    rgba(0, 0, 0, 0.55);
-}
-
-
-/* EVENT INFORMATION — LEFT */
-
-.event-info {
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  padding: 55px;
-}
-
-
-/* DATE */
-
-.event-date {
-  margin-bottom: 20px;
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: 3px;
-
-  color: #a51c30;
-}
-
-
-/* TITLE */
-
-.event-info h3 {
-  margin-bottom: 5px;
-
-  font-family:
-    "Bebas Neue",
-    Impact,
-    sans-serif;
-
-  font-size: clamp(65px, 8vw, 110px);
-
-  line-height: 0.82;
-
-  color: #fff;
-
-  text-transform: uppercase;
-}
-
-
-/* SUBTITLE */
-
-.event-subtitle {
-  margin-bottom: 25px;
-
-  font-size: 13px;
-
-  font-weight: 700;
-
-  letter-spacing: 3px;
-
-  color: #fff;
-}
-
-
-/* ARTIST */
-
-.event-artist {
-  margin-bottom: 20px;
-
-  font-family:
-    "Bebas Neue",
-    Impact,
-    sans-serif;
-
-  font-size: 42px;
-
-  line-height: 1;
-
-  color: #fff;
-}
-
-
-/* LOCATION */
-
-.event-location {
-  margin-bottom: 25px;
-
-  font-size: 11px;
-
-  line-height: 1.6;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
-  color: rgba(255, 255, 255, 0.65);
-}
-
-
-/* DESCRIPTION */
-
-.event-description {
-  max-width: 430px;
-
-  margin-bottom: 30px;
-
-  font-size: 14px;
-
-  line-height: 1.7;
-
-  color: rgba(255, 255, 255, 0.80);
-}
-
-.event-description strong {
-  color: #fff;
-}
-
-
-/* TICKET BUTTON */
-
-.event-ticket-button {
-  display: inline-flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  align-self: flex-start;
-
-  padding: 15px 24px;
-
-  border: 1px solid #fff;
-
-  color: #fff;
-
-  text-decoration: none;
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-
-  transition:
-    background 0.25s ease,
-    color 0.25s ease,
-    border-color 0.25s ease;
-}
-
-.event-ticket-button:hover {
-  background: #a51c30;
-
-  border-color: #a51c30;
-
-  color: #fff;
-}
-
-
-/* EVENT IMAGE — RIGHT */
-
-.event-image {
-  position: relative;
-
-  width: 100%;
-
-  min-height: 560px;
-
-  background: #080808;
-
-  overflow: hidden;
-}
-
-.event-image img {
-  display: block;
-
-  width: 100%;
-
-  height: 100%;
-
-  min-height: 560px;
-
-  object-fit: cover;
-
-  object-position: center;
-
-  border: 0;
-}
-
-
-/* =========================================
-   PLACEHOLDER
-========================================= */
-
-.section-placeholder {
-  display: inline-block;
-
-  margin-top: 10px;
-
-  padding: 12px 18px;
-
-  border: 1px solid rgba(255, 255, 255, 0.30);
-
-  font-size: 10px;
-
-  letter-spacing: 2px;
-
-  opacity: 0.7;
-}
-
-
-/* =========================================
-   CONTACT
-========================================= */
-
-.contact-section {
-  position: relative;
-
-  min-height: 70vh;
-
-  display: flex;
-  align-items: center;
-
-  background-image: url("images/sectionLondon.jpeg");
-
-  background-size: cover;
-
-  background-position: center;
-
-  background-repeat: no-repeat;
-
-  overflow: hidden;
-}
-
-.contact-section .section-overlay {
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.82) 0%,
-      rgba(0, 0, 0, 0.50) 50%,
-      rgba(0, 0, 0, 0.25) 100%
-    );
-}
-
-.contact-links {
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 20px;
-
-  margin-top: 35px;
-}
-
-.contact-links a {
-  color: #fff;
-
-  text-decoration: none;
-
-  padding: 14px 20px;
-
-  border: 1px solid rgba(255, 255, 255, 0.25);
-
-  font-size: 11px;
-
-  letter-spacing: 2px;
-
-  transition:
-    background 0.25s ease,
-    color 0.25s ease;
-}
-
-.contact-links a:hover {
-  background: #a51c30;
-
-  border-color: #a51c30;
-
-  color: #fff;
-}
-
-
-/* =========================================
-   FOOTER
-========================================= */
-
-.site-footer {
-  padding: 35px;
-
-  text-align: center;
-
-  background: #000;
-
-  border-top:
-    1px solid
-    rgba(255, 255, 255, 0.10);
-}
-
-.site-footer p {
-  font-size: 10px;
-
-  letter-spacing: 2px;
-
-  opacity: 0.45;
-}
-
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 1100px) {
-
-  .site-header {
-    padding: 18px 25px;
-  }
-
-  .logo {
-    width: 50px;
-    height: 23px;
-  }
-
-  .logo img {
-    width: 50px;
-    height: 21px;
-
-    max-width: 50px;
-    max-height: 21px;
-  }
-
-  .main-nav {
-    gap: 16px;
-  }
-
-  .main-nav a {
-    font-size: 10px;
-
-    letter-spacing: 1px;
-  }
-
-  .release-grid {
-    grid-template-columns:
-      repeat(2, minmax(0, 360px));
-  }
-
-  .archive-grid {
-    grid-template-columns:
-      repeat(2, 1fr);
-
-    max-width: 700px;
-  }
-
-}
-
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 700px) {
-
-  .site-header {
-    height: 62px;
-
-    padding: 15px 18px;
-  }
-
-  .logo {
-    width: 48px;
-    height: 22px;
-  }
-
-  .logo img {
-    width: 48px;
-    height: 20px;
-
-    max-width: 48px;
-    max-height: 20px;
-  }
-
-  .main-nav {
-    display: none;
-  }
-
-
-  /* HERO */
-
-  .hero {
-    min-height: 100svh;
-
-    background-position: center center;
-  }
-
-  .hero-content {
-    padding: 100px 25px 60px 25px;
-  }
-
-  .eyebrow {
-    font-size: 10px;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 20px;
-  }
-
-  .hero-text h1 {
-    font-size:
-      clamp(75px, 22vw, 130px);
-
-    line-height: 0.82;
-  }
-
-  .hero-text .riddim {
-    -webkit-text-stroke: 1px #fff;
-
-    text-stroke: 1px #fff;
-  }
-
-  .hero-description {
-    font-size: 11px;
-
-    letter-spacing: 2px;
-
-    max-width: 330px;
-  }
-
-
-  /* SECTIONS */
-
-  .image-section,
-  .theoutsidub-section,
-  .events-section,
-  .contact-section {
-
-    min-height: 100svh;
-  }
-
-  .section-content {
-    padding: 100px 25px 60px 25px;
-  }
-
-  .section-label {
-    font-size: 9px;
-
-    letter-spacing: 3px;
-
-    margin-bottom: 20px;
-  }
-
-  .section-content h2 {
-    font-size:
-      clamp(65px, 20vw, 110px);
-
-    margin-bottom: 25px;
-  }
-
-
-  /* RELEASES */
-
-  .release-grid {
-    grid-template-columns: 1fr;
-
-    gap: 15px;
-
-    margin-top: 30px;
-
-    max-width: 100%;
-  }
-
-  .release-card {
-    width: 100%;
-
-    padding: 15px;
-  }
-
-  .bandcamp-player iframe {
-    height: 470px;
-  }
-
-
-  /* OUTSIDUB VIDEO */
-
-  .outsidub-video {
-    width: 100%;
-
-    max-width: none;
-
-    margin-top: 30px;
-
-    aspect-ratio: 16 / 9;
-  }
-
-
-  /* ARCHIVE */
-
-  .archive-grid {
-    grid-template-columns:
-      1fr 1fr;
-
-    gap: 10px;
-
-    margin-top: 30px;
-
-    max-width: 100%;
-  }
-
-  .archive-card {
-    min-height: 100px;
-
-    padding: 15px;
-  }
-
-  .archive-card strong {
-    font-size: 10px;
-  }
-
-
-  /* =====================================
-     UPCOMING DUB SESSIONS — MOBILE
-  ===================================== */
-
-  .event-feature {
-    grid-template-columns: 1fr;
-
-    margin-top: 30px;
-  }
-
-  .event-info {
-    padding: 35px 25px;
-  }
-
-  .event-info h3 {
-    font-size: 75px;
-  }
-
-  .event-artist {
-    font-size: 36px;
-  }
-
-  .event-description {
-    font-size: 13px;
-  }
-
-  .event-image {
-    min-height: 420px;
-  }
-
-  .event-image img {
-    min-height: 420px;
-  }
-
-  .event-ticket-button {
-    width: 100%;
-  }
-
-
-  /* CONTACT */
-
-  .contact-links {
-    flex-direction: column;
-
-    align-items: flex-start;
-  }
-
-}
-
-
-/* =========================================
-   SMALL PHONES
-========================================= */
-
-@media (max-width: 420px) {
-
-  .hero-content,
-  .section-content {
-    padding-left: 20px;
-
-    padding-right: 20px;
-  }
-
-  .hero-text h1 {
-    font-size: 76px;
-  }
-
-  .section-content h2 {
-    font-size: 68px;
-  }
-
-  .archive-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .event-info {
-    padding: 30px 20px;
-  }
-
-  .event-info h3 {
-    font-size: 68px;
-  }
-
-  .event-image {
-    min-height: 350px;
-  }
-
-  .event-image img {
-    min-height: 350px;
-  }
-
-}
+transform: transl
