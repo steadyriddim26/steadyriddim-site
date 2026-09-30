@@ -65,7 +65,7 @@ a:hover {
 
     align-items: center;
 
-    padding: 25px 35px;
+    padding: 22px 35px;
 
     z-index: 100;
 
@@ -77,21 +77,53 @@ a:hover {
 }
 
 
+
+/* =========================================
+   SNAKE LOGO
+   ========================================= */
+
+
 .logo {
 
-    font-family: "Bebas Neue", sans-serif;
+    display: flex;
 
-    font-size: 25px;
+    align-items: center;
 
-    letter-spacing: 2px;
+    justify-content: flex-start;
 
-    line-height: 1;
+    width: 105px;
+
+    height: 28px;
+
+    flex-shrink: 0;
 }
+
+
+.logo img {
+
+    display: block;
+
+    width: auto;
+
+    height: 27px;
+
+    max-width: 105px;
+
+    object-fit: contain;
+}
+
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
 
 
 .main-nav {
 
     display: flex;
+
+    align-items: center;
 
     gap: 22px;
 
@@ -331,7 +363,7 @@ a:hover {
 
 
 /* =========================================
-   GENERAL IMAGE SECTIONS
+   IMAGE SECTIONS
    ========================================= */
 
 
@@ -361,14 +393,14 @@ a:hover {
 
 
 /* =========================================
-   MUSIC / BASS CULTURE
+   BASS CULTURE
    ========================================= */
 
 
 .music-section {
 
     background-image:
-        url("images/music.jpeg");
+        url("images/bassculture.jpeg");
 }
 
 
@@ -378,8 +410,8 @@ a:hover {
         linear-gradient(
             90deg,
             rgba(0,0,0,0.80) 0%,
-            rgba(0,0,0,0.52) 55%,
-            rgba(0,0,0,0.30) 100%
+            rgba(0,0,0,0.48) 55%,
+            rgba(0,0,0,0.25) 100%
         );
 }
 
@@ -411,8 +443,34 @@ a:hover {
 
 
 /* =========================================
+   LOVE SOUND & DISTORTION
+   ========================================= */
+
+
+.releases-section {
+
+    background-image:
+        url("images/netlabel.jpeg");
+
+    min-height: 90vh;
+}
+
+
+.releases-section .section-overlay {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.82) 0%,
+            rgba(0,0,0,0.52) 55%,
+            rgba(0,0,0,0.30) 100%
+        );
+}
+
+
+
+/* =========================================
    ARCHIVE
-   REUSES THE MUSIC IMAGE
    ========================================= */
 
 
@@ -537,7 +595,7 @@ a:hover {
 .section p,
 .image-section p {
 
-    max-width: 650px;
+    max-width: 680px;
 
     font-size: 17px;
 
@@ -551,12 +609,7 @@ a:hover {
 }
 
 
-
-/* =========================================
-   IMAGE SECTION SECOND PARAGRAPH
-   ========================================= */
-
-
+.section p + p,
 .image-section p + p {
 
     margin-top: 18px;
@@ -565,7 +618,7 @@ a:hover {
 
 
 /* =========================================
-   PLACEHOLDER / MEDIA BOX
+   MEDIA PLACEHOLDER
    ========================================= */
 
 
@@ -611,112 +664,6 @@ a:hover {
 
 
 /* =========================================
-   DARK SECTIONS
-   ========================================= */
-
-
-.section {
-
-    padding: 150px 7%;
-
-    min-height: 75vh;
-
-    border-bottom: 1px solid #222;
-
-    background: #080808;
-}
-
-
-.releases-section {
-
-    background: #0d0d0d;
-}
-
-
-.events-section {
-
-    background: #080808;
-}
-
-
-.contact-section {
-
-    background: #111;
-}
-
-
-
-/* =========================================
-   RELEASES
-   ========================================= */
-
-
-.release-grid {
-
-    margin-top: 70px;
-
-    display: grid;
-
-    grid-template-columns: repeat(3, 1fr);
-
-    gap: 20px;
-}
-
-
-.release-card {
-
-    min-height: 240px;
-
-    padding: 25px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: space-between;
-
-    border: 1px solid #333;
-
-    background: #111;
-
-    transition:
-        border-color 0.3s ease,
-        transform 0.3s ease;
-}
-
-
-.release-card:hover {
-
-    border-color: #777;
-
-    transform: translateY(-4px);
-}
-
-
-.release-card span {
-
-    font-size: 10px;
-
-    letter-spacing: 3px;
-
-    color: #666;
-}
-
-
-.release-card strong {
-
-    font-family: "Bebas Neue", sans-serif;
-
-    font-size: 32px;
-
-    font-weight: 400;
-
-    letter-spacing: 1px;
-}
-
-
-
-/* =========================================
    THEOUTSIDUB
    ========================================= */
 
@@ -725,7 +672,7 @@ a:hover {
 
     position: relative;
 
-    min-height: 85vh;
+    min-height: 90vh;
 
     background:
         linear-gradient(
@@ -737,11 +684,6 @@ a:hover {
 
     overflow: hidden;
 }
-
-
-/*
-   Subtle graphic texture / atmosphere
-*/
 
 
 .theoutsidub-section::before {
@@ -766,14 +708,6 @@ a:hover {
 }
 
 
-.theoutsidub-section .section-content {
-
-    position: relative;
-
-    z-index: 2;
-}
-
-
 .theoutsidub-section .section-label {
 
     color: #aaa;
@@ -784,7 +718,7 @@ a:hover {
 
     letter-spacing: 0;
 
-    max-width: 900px;
+    max-width: 1100px;
 }
 
 
@@ -792,14 +726,8 @@ a:hover {
 
     color: #aaa;
 
-    max-width: 680px;
+    max-width: 700px;
 }
-
-
-
-/* =========================================
-   THEOUTSIDUB MEDIA BOX
-   ========================================= */
 
 
 .theoutsidub-section .section-placeholder {
@@ -817,7 +745,82 @@ a:hover {
 
 
 /* =========================================
-   ARCHIVE
+   RELEASE CARDS
+   ========================================= */
+
+
+.release-grid {
+
+    margin-top: 70px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.release-card {
+
+    min-height: 200px;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border: 1px solid rgba(255,255,255,0.25);
+
+    background: rgba(0,0,0,0.42);
+
+    backdrop-filter: blur(3px);
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.release-card:hover {
+
+    border-color: rgba(255,255,255,0.65);
+
+    background: rgba(0,0,0,0.58);
+
+    transform: translateY(-4px);
+}
+
+
+.release-card span {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #aaa;
+}
+
+
+.release-card strong {
+
+    font-family: "Bebas Neue", sans-serif;
+
+    font-size: 32px;
+
+    font-weight: 400;
+
+    letter-spacing: 1px;
+}
+
+
+
+/* =========================================
+   ARCHIVE GRID
    ========================================= */
 
 
@@ -892,8 +895,14 @@ a:hover {
 
 
 /* =========================================
-   EVENTS
+   EVENTS / DUB SESSIONS
    ========================================= */
+
+
+.events-section {
+
+    background: #080808;
+}
 
 
 .event-list {
@@ -942,6 +951,12 @@ a:hover {
 /* =========================================
    CONTACT
    ========================================= */
+
+
+.contact-section {
+
+    background: #111;
+}
 
 
 .text-link {
@@ -1020,7 +1035,7 @@ a:hover {
    ========================================= */
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
 
 
     .main-nav {
@@ -1028,6 +1043,20 @@ a:hover {
         gap: 14px;
 
         font-size: 9px;
+    }
+
+
+    .logo {
+
+        width: 85px;
+    }
+
+
+    .logo img {
+
+        max-width: 85px;
+
+        height: 25px;
     }
 
 
@@ -1056,12 +1085,6 @@ a:hover {
         grid-template-columns: 1fr;
     }
 
-
-    .archive-grid {
-
-        grid-template-columns: 1fr 1fr;
-    }
-
 }
 
 
@@ -1072,6 +1095,9 @@ a:hover {
 
 
 @media (max-width: 700px) {
+
+
+    /* HEADER */
 
 
     .site-header {
@@ -1088,8 +1114,19 @@ a:hover {
 
     .logo {
 
-        font-size: 23px;
+        width: 75px;
+
+        height: 25px;
     }
+
+
+    .logo img {
+
+        max-width: 75px;
+
+        height: 24px;
+    }
+
 
 
     /* HERO */
@@ -1262,7 +1299,7 @@ a:hover {
 
     .theoutsidub-section {
 
-        min-height: 85svh;
+        min-height: 90svh;
     }
 
 
