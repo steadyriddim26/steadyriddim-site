@@ -21,9 +21,7 @@ html {
 body {
   background: #050505;
   color: #f2f2f2;
-
   font-family: Arial, Helvetica, sans-serif;
-
   overflow-x: hidden;
 }
 
@@ -76,8 +74,6 @@ body {
   overflow: hidden;
 
   position: relative;
-
-  z-index: 1001;
 }
 
 .logo img {
@@ -92,10 +88,6 @@ body {
   object-fit: contain;
 
   object-position: left center;
-
-  position: relative;
-
-  z-index: 1002;
 }
 
 
@@ -182,9 +174,7 @@ body {
   width: 100%;
 
   padding:
-    120px
-    8%
-    80px;
+    120px 8% 80px;
 }
 
 .eyebrow {
@@ -210,11 +200,7 @@ body {
     sans-serif;
 
   font-size:
-    clamp(
-      90px,
-      15vw,
-      220px
-    );
+    clamp(90px, 15vw, 220px);
 
   line-height: 0.78;
 
@@ -337,8 +323,7 @@ body {
   margin: 0 auto;
 
   padding:
-    120px
-    8%;
+    120px 8%;
 }
 
 .section-label {
@@ -350,7 +335,13 @@ body {
 
   letter-spacing: 4px;
 
-  opacity: 0.65;
+  /*
+     CARMÍN
+     */
+
+  color: #a51c30;
+
+  opacity: 1;
 }
 
 .section-content h2 {
@@ -362,11 +353,7 @@ body {
     sans-serif;
 
   font-size:
-    clamp(
-      70px,
-      11vw,
-      150px
-    );
+    clamp(70px, 11vw, 150px);
 
   line-height: 0.82;
 
@@ -415,7 +402,7 @@ body {
   background-image:
     url("images/netlabel.jpeg");
 
-  min-height: 90vh;
+  min-height: 100vh;
 }
 
 .release-grid {
@@ -465,7 +452,9 @@ body {
 }
 
 
-/* RELEASE NUMBER */
+/* =========================================================
+   RELEASE NUMBER
+   ========================================================= */
 
 .release-number {
   margin-bottom: 8px;
@@ -474,20 +463,37 @@ body {
 
   letter-spacing: 2px;
 
-  opacity: 0.55;
+  color: #a51c30;
+
+  font-weight: 700;
 }
 
 
-/* RELEASE TITLE */
+/* =========================================================
+   RELEASE TITLE
+   ========================================================= */
 
 .release-title {
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 
   font-size: 15px;
 
   font-weight: 700;
 
+  line-height: 1.25;
+
   letter-spacing: 1px;
+}
+
+.release-subtitle {
+  margin-bottom: 15px;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color:
+    rgba(255, 255, 255, 0.55);
 }
 
 
@@ -501,6 +507,10 @@ body {
   overflow: hidden;
 
   background: #111111;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.10);
 }
 
 .bandcamp-player iframe {
@@ -514,7 +524,9 @@ body {
 }
 
 
-/* BANDCAMP LINK */
+/* =========================================================
+   BANDCAMP LINK
+   ========================================================= */
 
 .bandcamp-link {
   display: inline-block;
@@ -531,13 +543,14 @@ body {
 
   letter-spacing: 2px;
 
-  opacity: 0.75;
-
   transition:
+    color 0.25s ease,
     opacity 0.25s ease;
 }
 
 .bandcamp-link:hover {
+  color: #a51c30;
+
   opacity: 1;
 }
 
@@ -551,14 +564,6 @@ body {
 
   justify-content:
     space-between;
-}
-
-.release-coming-soon span {
-  font-size: 10px;
-
-  letter-spacing: 2px;
-
-  opacity: 0.55;
 }
 
 .release-coming-soon strong {
@@ -616,7 +621,7 @@ body {
 
 
 /* =========================================================
-   THEOUTSIDUB — LARGE YOUTUBE VIDEO
+   THEOUTSIDUB VIDEO
    ========================================================= */
 
 .outsidub-video {
@@ -715,7 +720,7 @@ body {
 
   letter-spacing: 2px;
 
-  opacity: 0.6;
+  color: #a51c30;
 }
 
 .archive-card strong {
@@ -776,7 +781,7 @@ body {
 
   letter-spacing: 3px;
 
-  opacity: 0.6;
+  color: #a51c30;
 }
 
 .event-item strong {
@@ -854,9 +859,11 @@ body {
 }
 
 .contact-links a:hover {
-  background: #ffffff;
+  background: #a51c30;
 
-  color: #000000;
+  border-color: #a51c30;
+
+  color: #ffffff;
 }
 
 
@@ -950,8 +957,6 @@ body {
   .logo {
     width: 48px;
     height: 22px;
-
-    overflow: hidden;
   }
 
   .logo img {
@@ -960,8 +965,6 @@ body {
 
     max-width: 48px;
     max-height: 20px;
-
-    object-fit: contain;
   }
 
   .main-nav {
@@ -993,11 +996,7 @@ body {
 
   .hero-text h1 {
     font-size:
-      clamp(
-        75px,
-        22vw,
-        130px
-      );
+      clamp(75px, 22vw, 130px);
 
     line-height: 0.82;
   }
@@ -1043,11 +1042,7 @@ body {
 
   .section-content h2 {
     font-size:
-      clamp(
-        65px,
-        20vw,
-        110px
-      );
+      clamp(65px, 20vw, 110px);
 
     margin-bottom: 25px;
   }
@@ -1071,9 +1066,7 @@ body {
 
   .release-card {
     width: 100%;
-  }
 
-  .release-card-bandcamp {
     padding: 15px;
   }
 
@@ -1086,7 +1079,7 @@ body {
   }
 
 
-  /* THEOUTSIDUB VIDEO */
+  /* THEOUTSIDUB */
 
   .outsidub-video {
     width: 100%;
