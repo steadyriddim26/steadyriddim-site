@@ -299,13 +299,13 @@ body {
 .section-label {
   margin-bottom: 25px;
 
-  font-size: 11px;
+  font-size: 14px;
 
   font-weight: 700;
 
   letter-spacing: 4px;
 
-  color: #a51c30;
+  color: #d62f4a;
 }
 
 .section-content h2 {
@@ -420,7 +420,7 @@ body {
 
   letter-spacing: 2px;
 
-  color: #a51c30;
+  color: #d62f4a;
 
   font-weight: 700;
 }
@@ -491,7 +491,7 @@ body {
 }
 
 .bandcamp-link:hover {
-  color: #a51c30;
+  color: #d62f4a;
 
   opacity: 1;
 }
@@ -631,7 +631,7 @@ body {
 
   letter-spacing: 2px;
 
-  color: #a51c30;
+  color: #d62f4a;
 }
 
 .archive-card strong {
@@ -680,7 +680,7 @@ body {
 
 .mixtape-series {
   margin-bottom: 10px;
-  color: #a51c30;
+  color: #d62f4a;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -790,7 +790,7 @@ body {
 
   letter-spacing: 3px;
 
-  color: #a51c30;
+  color: #d62f4a;
 }
 
 
@@ -915,9 +915,9 @@ body {
 }
 
 .event-ticket-button:hover {
-  background: #a51c30;
+  background: #d62f4a;
 
-  border-color: #a51c30;
+  border-color: #d62f4a;
 
   color: #fff;
 }
@@ -1037,9 +1037,9 @@ body {
 }
 
 .contact-links a:hover {
-  background: #a51c30;
+  background: #d62f4a;
 
-  border-color: #a51c30;
+  border-color: #d62f4a;
 
   color: #fff;
 }
@@ -1205,7 +1205,7 @@ body {
   }
 
   .section-label {
-    font-size: 9px;
+    font-size: 10px;
 
     letter-spacing: 3px;
 
