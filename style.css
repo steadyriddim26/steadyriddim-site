@@ -361,6 +361,12 @@ body {
   background-image: url("images/backalbumcover.jpg");
 
   min-height: 100vh;
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
 }
 
 .release-grid {
