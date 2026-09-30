@@ -282,11 +282,6 @@ body {
     );
 }
 
-
-/*
-   CONTENT ALIGNED TO THE LEFT
-*/
-
 .section-content {
   position: relative;
 
@@ -323,6 +318,8 @@ body {
   line-height: 0.82;
 
   text-transform: uppercase;
+
+  color: #fff;
 }
 
 .section-content p {
@@ -513,9 +510,6 @@ body {
   overflow: hidden;
 }
 
-
-/* EXTRA TEXTURE OVER IMAGE */
-
 .theoutsidub-section::before {
   content: "";
 
@@ -658,16 +652,24 @@ body {
 }
 
 
+/*
+   IMPORTANT:
+   Keep the section title white.
+*/
+
+.events-section h2 {
+  color: #fff;
+}
+
+
 /* EVENT FEATURE */
 
 .event-feature {
-  position: relative;
-
   display: grid;
 
   grid-template-columns:
-    minmax(320px, 1fr)
-    minmax(320px, 1fr);
+    minmax(0, 1fr)
+    minmax(0, 1fr);
 
   width: 100%;
 
@@ -679,8 +681,6 @@ body {
 
   background: rgba(0, 0, 0, 0.55);
 
-  backdrop-filter: blur(8px);
-
   overflow: hidden;
 
   box-shadow:
@@ -689,23 +689,7 @@ body {
 }
 
 
-/* EVENT IMAGE */
-
-.event-image {
-  min-height: 500px;
-
-  background-image:
-    url("images/tasteit%20.jpg");
-
-  background-size: cover;
-
-  background-position: center;
-
-  background-repeat: no-repeat;
-}
-
-
-/* EVENT INFORMATION */
+/* EVENT INFORMATION — LEFT */
 
 .event-info {
   display: flex;
@@ -747,7 +731,9 @@ body {
 
   line-height: 0.82;
 
-  letter-spacing: 1px;
+  color: #fff;
+
+  text-transform: uppercase;
 }
 
 
@@ -761,6 +747,8 @@ body {
   font-weight: 700;
 
   letter-spacing: 3px;
+
+  color: #fff;
 }
 
 
@@ -813,6 +801,10 @@ body {
   color: rgba(255, 255, 255, 0.80);
 }
 
+.event-description strong {
+  color: #fff;
+}
+
 
 /* TICKET BUTTON */
 
@@ -851,6 +843,37 @@ body {
   border-color: #a51c30;
 
   color: #fff;
+}
+
+
+/* EVENT IMAGE — RIGHT */
+
+.event-image {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 560px;
+
+  background: #080808;
+
+  overflow: hidden;
+}
+
+.event-image img {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  min-height: 560px;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  border: 0;
 }
 
 
@@ -1119,14 +1142,6 @@ body {
     margin-bottom: 25px;
   }
 
-  .section-content p {
-    font-size: 14px;
-
-    line-height: 1.6;
-
-    max-width: 100%;
-  }
-
 
   /* RELEASES */
 
@@ -1188,24 +1203,42 @@ body {
   }
 
 
-  /* EVENTS */
+  /* =====================================
+     UPCOMING DUB SESSIONS — MOBILE
+  ===================================== */
 
-  .event-list {
+  .event-feature {
+    grid-template-columns: 1fr;
+
     margin-top: 30px;
   }
 
-  .event-item {
-    padding: 20px 0;
-
-    gap: 20px;
+  .event-info {
+    padding: 35px 25px;
   }
 
-  .event-item span {
-    font-size: 9px;
+  .event-info h3 {
+    font-size: 75px;
   }
 
-  .event-item strong {
-    font-size: 12px;
+  .event-artist {
+    font-size: 36px;
+  }
+
+  .event-description {
+    font-size: 13px;
+  }
+
+  .event-image {
+    min-height: 420px;
+  }
+
+  .event-image img {
+    min-height: 420px;
+  }
+
+  .event-ticket-button {
+    width: 100%;
   }
 
 
@@ -1243,6 +1276,22 @@ body {
 
   .archive-grid {
     grid-template-columns: 1fr;
+  }
+
+  .event-info {
+    padding: 30px 20px;
+  }
+
+  .event-info h3 {
+    font-size: 68px;
+  }
+
+  .event-image {
+    min-height: 350px;
+  }
+
+  .event-image img {
+    min-height: 350px;
   }
 
 }
