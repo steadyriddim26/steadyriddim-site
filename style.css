@@ -1,5 +1,6 @@
 /* =========================================
    STEADY RIDDIM
+   STYLE.CSS
    ========================================= */
 
 
@@ -24,6 +25,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 
     line-height: 1.5;
+
+    overflow-x: hidden;
 }
 
 
@@ -100,6 +103,18 @@ a:hover {
 }
 
 
+.main-nav a {
+
+    transition: opacity 0.2s ease;
+}
+
+
+.main-nav a:hover {
+
+    opacity: 0.55;
+}
+
+
 
 /* =========================================
    HERO
@@ -121,7 +136,6 @@ a:hover {
     overflow: hidden;
 
     border-bottom: 1px solid #222;
-
 
     background-image:
         url("images/steadyfix.jpeg");
@@ -297,6 +311,11 @@ a:hover {
     letter-spacing: 2px;
 
     box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        opacity 0.25s ease;
 }
 
 
@@ -312,7 +331,7 @@ a:hover {
 
 
 /* =========================================
-   IMAGE SECTIONS
+   GENERAL IMAGE SECTIONS
    ========================================= */
 
 
@@ -341,7 +360,9 @@ a:hover {
 
 
 
-/* MUSIC IMAGE */
+/* =========================================
+   MUSIC / BASS CULTURE
+   ========================================= */
 
 
 .music-section {
@@ -351,8 +372,22 @@ a:hover {
 }
 
 
+.music-section .section-overlay {
 
-/* LIVE DUB IMAGE */
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.80) 0%,
+            rgba(0,0,0,0.52) 55%,
+            rgba(0,0,0,0.30) 100%
+        );
+}
+
+
+
+/* =========================================
+   LIVE DUB
+   ========================================= */
 
 
 .live-dub-section {
@@ -362,8 +397,48 @@ a:hover {
 }
 
 
+.live-dub-section .section-overlay {
 
-/* IMAGE OVERLAY */
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.80) 0%,
+            rgba(0,0,0,0.50) 55%,
+            rgba(0,0,0,0.28) 100%
+        );
+}
+
+
+
+/* =========================================
+   ARCHIVE
+   REUSES THE MUSIC IMAGE
+   ========================================= */
+
+
+.archive-image-section {
+
+    background-image:
+        url("images/music.jpeg");
+}
+
+
+.archive-image-section .section-overlay {
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,0.84) 0%,
+            rgba(0,0,0,0.58) 55%,
+            rgba(0,0,0,0.35) 100%
+        );
+}
+
+
+
+/* =========================================
+   IMAGE OVERLAY
+   ========================================= */
 
 
 .section-overlay {
@@ -426,6 +501,12 @@ a:hover {
 }
 
 
+
+/* =========================================
+   HEADINGS
+   ========================================= */
+
+
 .section h2,
 .image-section h2 {
 
@@ -447,10 +528,16 @@ a:hover {
 }
 
 
+
+/* =========================================
+   PARAGRAPHS
+   ========================================= */
+
+
 .section p,
 .image-section p {
 
-    max-width: 600px;
+    max-width: 650px;
 
     font-size: 17px;
 
@@ -466,7 +553,19 @@ a:hover {
 
 
 /* =========================================
-   PLACEHOLDER
+   IMAGE SECTION SECOND PARAGRAPH
+   ========================================= */
+
+
+.image-section p + p {
+
+    margin-top: 18px;
+}
+
+
+
+/* =========================================
+   PLACEHOLDER / MEDIA BOX
    ========================================= */
 
 
@@ -476,7 +575,7 @@ a:hover {
 
     width: min(700px, 100%);
 
-    height: 150px;
+    min-height: 150px;
 
     display: flex;
 
@@ -486,7 +585,7 @@ a:hover {
 
     border: 1px dashed rgba(255,255,255,0.35);
 
-    background: rgba(0,0,0,0.25);
+    background: rgba(0,0,0,0.30);
 
     color: #aaa;
 
@@ -495,6 +594,18 @@ a:hover {
     letter-spacing: 3px;
 
     text-transform: uppercase;
+
+    transition:
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.section-placeholder:hover {
+
+    border-color: rgba(255,255,255,0.60);
+
+    background: rgba(0,0,0,0.45);
 }
 
 
@@ -519,12 +630,6 @@ a:hover {
 .releases-section {
 
     background: #0d0d0d;
-}
-
-
-.archive-section {
-
-    background: #111;
 }
 
 
@@ -574,7 +679,9 @@ a:hover {
 
     background: #111;
 
-    transition: 0.3s ease;
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
 }
 
 
@@ -610,6 +717,106 @@ a:hover {
 
 
 /* =========================================
+   THEOUTSIDUB
+   ========================================= */
+
+
+.theoutsidub-section {
+
+    position: relative;
+
+    min-height: 85vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            #090909 0%,
+            #151515 50%,
+            #080808 100%
+        );
+
+    overflow: hidden;
+}
+
+
+/*
+   Subtle graphic texture / atmosphere
+*/
+
+
+.theoutsidub-section::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.20;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 5px,
+            rgba(255,255,255,0.025) 6px
+        );
+
+    pointer-events: none;
+}
+
+
+.theoutsidub-section .section-content {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.theoutsidub-section .section-label {
+
+    color: #aaa;
+}
+
+
+.theoutsidub-section h2 {
+
+    letter-spacing: 0;
+
+    max-width: 900px;
+}
+
+
+.theoutsidub-section p {
+
+    color: #aaa;
+
+    max-width: 680px;
+}
+
+
+
+/* =========================================
+   THEOUTSIDUB MEDIA BOX
+   ========================================= */
+
+
+.theoutsidub-section .section-placeholder {
+
+    border-color: rgba(255,255,255,0.28);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.025),
+            rgba(0,0,0,0.40)
+        );
+}
+
+
+
+/* =========================================
    ARCHIVE
    ========================================= */
 
@@ -638,17 +845,24 @@ a:hover {
 
     justify-content: space-between;
 
-    border: 1px solid #333;
+    border: 1px solid rgba(255,255,255,0.25);
 
-    background: #0b0b0b;
+    background: rgba(0,0,0,0.42);
 
-    transition: 0.3s ease;
+    backdrop-filter: blur(3px);
+
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease;
 }
 
 
 .archive-card:hover {
 
-    border-color: #777;
+    border-color: rgba(255,255,255,0.65);
+
+    background: rgba(0,0,0,0.58);
 
     transform: translateY(-4px);
 }
@@ -660,7 +874,7 @@ a:hover {
 
     letter-spacing: 3px;
 
-    color: #555;
+    color: #aaa;
 }
 
 
@@ -747,6 +961,18 @@ a:hover {
     text-transform: uppercase;
 
     letter-spacing: 2px;
+
+    transition:
+        border-color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+.text-link:hover {
+
+    border-color: #fff;
+
+    opacity: 1;
 }
 
 
@@ -830,6 +1056,12 @@ a:hover {
         grid-template-columns: 1fr;
     }
 
+
+    .archive-grid {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
 }
 
 
@@ -852,6 +1084,15 @@ a:hover {
 
         display: none;
     }
+
+
+    .logo {
+
+        font-size: 23px;
+    }
+
+
+    /* HERO */
 
 
     .hero {
@@ -935,9 +1176,13 @@ a:hover {
     }
 
 
+
+    /* IMAGE SECTIONS */
+
+
     .image-section {
 
-        min-height: 85svh;
+        min-height: 90svh;
 
         padding: 100px 20px;
 
@@ -962,31 +1207,113 @@ a:hover {
     }
 
 
+    .section-label {
+
+        margin-bottom: 25px;
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
+    }
+
+
     .section p,
     .image-section p {
 
         font-size: 15px;
+
+        line-height: 1.6;
     }
 
 
     .section-placeholder {
 
-        height: 130px;
+        min-height: 130px;
 
         margin-top: 45px;
+
+        font-size: 9px;
+
+        letter-spacing: 2px;
     }
+
+
+
+    /* RELEASES */
+
+
+    .release-grid {
+
+        grid-template-columns: 1fr;
+
+        margin-top: 50px;
+    }
+
+
+    .release-card {
+
+        min-height: 180px;
+    }
+
+
+
+    /* THEOUTSIDUB */
+
+
+    .theoutsidub-section {
+
+        min-height: 85svh;
+    }
+
+
+    .theoutsidub-section h2 {
+
+        font-size: 19vw;
+    }
+
+
+
+    /* ARCHIVE */
 
 
     .archive-grid {
 
         grid-template-columns: 1fr;
+
+        margin-top: 50px;
     }
 
 
     .archive-card {
 
         min-height: 170px;
+
+        padding: 25px;
     }
+
+
+    .archive-card strong {
+
+        font-size: 34px;
+    }
+
+
+
+    /* EVENTS */
+
+
+    .event-item {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+
+
+    /* FOOTER */
 
 
     .site-footer {
@@ -1002,6 +1329,56 @@ a:hover {
     .site-footer p {
 
         margin-top: 30px;
+    }
+
+}
+
+
+
+/* =========================================
+   VERY SMALL PHONES
+   ========================================= */
+
+
+@media (max-width: 400px) {
+
+
+    .hero h1 .steady {
+
+        font-size: 23vw;
+    }
+
+
+    .hero h1 .riddim {
+
+        font-size: 26vw;
+    }
+
+
+    .hero-description {
+
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .hero-links {
+
+        flex-wrap: wrap;
+    }
+
+
+    .section h2,
+    .image-section h2 {
+
+        font-size: 19vw;
+    }
+
+
+    .archive-card strong {
+
+        font-size: 30px;
     }
 
 }
