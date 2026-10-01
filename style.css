@@ -120,6 +120,38 @@ body {
 }
 
 
+
+/* =========================================
+   FIXED SECTION BACKGROUNDS
+========================================= */
+
+.hero,
+.image-section,
+.theoutsidub-section {
+  background-attachment: fixed;
+}
+
+/* =========================================
+   SINGLE-VIEW NAVIGATION
+========================================= */
+
+body.view-mode .home-view {
+  display: none;
+}
+
+body.view-home .site-view {
+  display: none;
+}
+
+body.view-mode .site-view {
+  min-height: 100vh;
+}
+
+body.view-mode .site-view .section-content {
+  min-height: 100vh;
+}
+
+
 /* =========================================
    HERO
 ========================================= */
@@ -1134,6 +1166,14 @@ body {
 ========================================= */
 
 @media (max-width: 700px) {
+
+  .hero,
+  .image-section,
+  .theoutsidub-section {
+    background-attachment: scroll;
+  }
+
+
 
   .site-header {
     height: 62px;
