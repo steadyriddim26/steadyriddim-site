@@ -789,12 +789,11 @@ body.view-mode .site-view .section-content {
   display: flex;
   align-items: center;
 
-  background:
-    linear-gradient(
-      135deg,
-      #0d0d0d,
-      #030303
-    );
+  background-image: url("images/sss.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
   overflow: hidden;
 }
