@@ -105,7 +105,8 @@ body {
 }
 
 .main-nav a:hover {
-  opacity: 0.55;
+  color: #d62f4a;
+  opacity: 1;
 }
 
 
@@ -1279,7 +1280,11 @@ body.view-mode .site-view .section-content {
     border-bottom: 1px solid rgba(255, 255, 255, 0.10);
   }
 
-  .mobile-menu a:last-child {
+  .mobile-menu a:hover {
+  color: #d62f4a;
+}
+
+.mobile-menu a:last-child {
     border-bottom: 0;
   }
 
