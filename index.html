@@ -62,7 +62,7 @@
 
   <!-- HERO -->
 
-  <section class="hero">
+  <section class="hero home-view">
 
     <div class="hero-overlay"></div>
 
@@ -99,7 +99,7 @@
   <!-- 01 / MUSIC -->
 
   <section
-    class="image-section music-section"
+    class="image-section music-section site-view"
     id="music">
 
     <div class="section-overlay"></div>
@@ -161,7 +161,7 @@
   <!-- 02 / LIVE DUB -->
 
   <section
-    class="image-section live-dub-section"
+    class="image-section live-dub-section site-view"
     id="live-dub">
 
     <div class="section-overlay"></div>
@@ -217,7 +217,7 @@
   <!-- 03 / RELEASES -->
 
   <section
-    class="image-section releases-section"
+    class="image-section releases-section site-view"
     id="releases">
 
     <div class="section-overlay"></div>
@@ -489,7 +489,7 @@
   <!-- 04 / THEOUTSIDUB -->
 
   <section
-    class="section theoutsidub-section"
+    class="section theoutsidub-section site-view"
     id="theoutsidub">
 
     <div class="section-overlay"></div>
@@ -546,7 +546,7 @@
   <!-- 05 / ARCHIVE -->
 
   <section
-    class="image-section archive-image-section"
+    class="image-section archive-image-section site-view"
     id="archive">
 
     <div class="section-overlay"></div>
@@ -668,7 +668,7 @@
   <!-- 06 / DUB SESSIONS -->
 
   <section
-    class="section events-section"
+    class="section events-section home-view"
     id="events">
 
     <div class="section-content">
@@ -835,6 +835,132 @@
         document.body.classList.remove("menu-open");
       });
     });
+  </script>
+
+
+  <script>
+    (function () {
+      const viewSections = document.querySelectorAll('.site-view');
+      const homeSections = document.querySelectorAll('.home-view');
+      const navLinks = document.querySelectorAll('.main-nav a, .mobile-menu a, .hero-links a');
+      const logo = document.querySelector('.logo');
+      const mobileToggle = document.querySelector('.mobile-menu-toggle');
+      const mobileMenu = document.querySelector('.mobile-menu');
+
+      function closeMobileMenu() {
+        if (!mobileToggle || !mobileMenu) return;
+        mobileToggle.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        mobileMenu.classList.remove('is-open');
+      }
+
+      function showHome(targetId) {
+        document.body.classList.remove('view-mode');
+        document.body.classList.add('view-home');
+        closeMobileMenu();
+
+        if (targetId) {
+          requestAnimationFrame(function () {
+            const target = document.getElementById(targetId);
+            if (target) {
+              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+        } else {
+          window.scrollTo({ top: 0, behavior: 'auto' });
+        }
+      }
+
+      function showView(id) {
+        const target = document.getElementById(id);
+        if (!target || !target.classList.contains('site-view')) return;
+
+        document.body.classList.add('view-mode');
+        document.body.classList.remove('view-home');
+        closeMobileMenu();
+        window.scrollTo({ top: 0, behavior: 'auto' });
+
+        history.pushState({ view: id }, '', '#' + id);
+      }
+
+      function handleLink(link) {
+        const href = link.getAttribute('href');
+        if (!href || href.charAt(0) !== '#') return;
+
+        const id = href.slice(1);
+        const target = document.getElementById(id);
+
+        if (target && target.classList.contains('site-view')) {
+          showView(id);
+          return;
+        }
+
+        if (id === 'events' || id === 'contact') {
+          history.pushState({ view: 'home', target: id }, '', '#' + id);
+          showHome(id);
+          return;
+        }
+
+        if (id === 'music' || id === 'live-dub' || id === 'releases' || id === 'theoutsidub' || id === 'archive') {
+          showView(id);
+          return;
+        }
+
+        showHome();
+      }
+
+      navLinks.forEach(function (link) {
+        link.addEventListener('click', function (event) {
+          const href = link.getAttribute('href');
+          if (href && href.charAt(0) === '#') {
+            event.preventDefault();
+            handleLink(link);
+          }
+        });
+      });
+
+      if (logo) {
+        logo.addEventListener('click', function (event) {
+          event.preventDefault();
+          history.pushState({ view: 'home' }, '', '#home');
+          showHome();
+        });
+      }
+
+      if (mobileToggle) {
+        mobileToggle.addEventListener('click', function () {
+          const isOpen = mobileToggle.getAttribute('aria-expanded') === 'true';
+          mobileToggle.setAttribute('aria-expanded', String(!isOpen));
+          mobileMenu.setAttribute('aria-hidden', String(isOpen));
+          mobileMenu.classList.toggle('is-open', !isOpen);
+        });
+      }
+
+      window.addEventListener('popstate', function () {
+        const id = window.location.hash.slice(1);
+
+        if (id && document.getElementById(id) && document.getElementById(id).classList.contains('site-view')) {
+          document.body.classList.add('view-mode');
+          document.body.classList.remove('view-home');
+          closeMobileMenu();
+          window.scrollTo({ top: 0, behavior: 'auto' });
+        } else if (id === 'events' || id === 'contact') {
+          showHome(id);
+        } else {
+          showHome();
+        }
+      });
+
+      const initialId = window.location.hash.slice(1);
+      if (initialId && document.getElementById(initialId) && document.getElementById(initialId).classList.contains('site-view')) {
+        document.body.classList.add('view-mode');
+        document.body.classList.remove('view-home');
+      } else if (initialId === 'events' || initialId === 'contact') {
+        showHome(initialId);
+      } else {
+        document.body.classList.add('view-home');
+      }
+    })();
   </script>
 
 </body>
