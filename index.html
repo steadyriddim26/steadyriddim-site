@@ -840,9 +840,9 @@
 
   <script>
     (function () {
-      const viewSections = document.querySelectorAll('.site-view');
-      const homeSections = document.querySelectorAll('.home-view');
-      const navLinks = document.querySelectorAll('.main-nav a, .mobile-menu a, .hero-links a');
+      const viewIds = ['music', 'live-dub', 'releases', 'theoutsidub', 'archive'];
+      const homeIds = ['events', 'contact'];
+      const allLinks = document.querySelectorAll('.main-nav a, .mobile-menu a, .hero-links a');
       const logo = document.querySelector('.logo');
       const mobileToggle = document.querySelector('.mobile-menu-toggle');
       const mobileMenu = document.querySelector('.mobile-menu');
@@ -854,33 +854,35 @@
         mobileMenu.classList.remove('is-open');
       }
 
-      function showHome(targetId) {
-        document.body.classList.remove('view-mode');
-        document.body.classList.add('view-home');
-        closeMobileMenu();
+      function setView(viewId, updateUrl) {
+        const isSectionView = viewIds.includes(viewId);
+        const isHomeTarget = homeIds.includes(viewId);
 
-        if (targetId) {
-          requestAnimationFrame(function () {
-            const target = document.getElementById(targetId);
-            if (target) {
-              target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-          });
-        } else {
-          window.scrollTo({ top: 0, behavior: 'auto' });
+        document.querySelectorAll('.site-view').forEach(function (section) {
+          section.hidden = !isSectionView || section.id !== viewId;
+        });
+
+        document.querySelectorAll('.home-view').forEach(function (section) {
+          section.hidden = isSectionView;
+        });
+
+        document.body.classList.toggle('view-mode', isSectionView);
+        document.body.classList.toggle('view-home', !isSectionView);
+
+        closeMobileMenu();
+        window.scrollTo(0, 0);
+
+        if (updateUrl) {
+          const hash = viewId ? '#' + viewId : '#home';
+          history.pushState({ view: viewId || 'home' }, '', hash);
         }
-      }
 
-      function showView(id) {
-        const target = document.getElementById(id);
-        if (!target || !target.classList.contains('site-view')) return;
-
-        document.body.classList.add('view-mode');
-        document.body.classList.remove('view-home');
-        closeMobileMenu();
-        window.scrollTo({ top: 0, behavior: 'auto' });
-
-        history.pushState({ view: id }, '', '#' + id);
+        if (isHomeTarget) {
+          requestAnimationFrame(function () {
+            const target = document.getElementById(viewId);
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          });
+        }
       }
 
       function handleLink(link) {
@@ -888,46 +890,31 @@
         if (!href || href.charAt(0) !== '#') return;
 
         const id = href.slice(1);
-        const target = document.getElementById(id);
 
-        if (target && target.classList.contains('site-view')) {
-          showView(id);
-          return;
+        if (viewIds.includes(id)) {
+          setView(id, true);
+        } else if (homeIds.includes(id)) {
+          setView(id, true);
+        } else {
+          setView('home', true);
         }
-
-        if (id === 'events' || id === 'contact') {
-          history.pushState({ view: 'home', target: id }, '', '#' + id);
-          showHome(id);
-          return;
-        }
-
-        if (id === 'music' || id === 'live-dub' || id === 'releases' || id === 'theoutsidub' || id === 'archive') {
-          showView(id);
-          return;
-        }
-
-        showHome();
       }
 
-      navLinks.forEach(function (link) {
+      allLinks.forEach(function (link) {
         link.addEventListener('click', function (event) {
-          const href = link.getAttribute('href');
-          if (href && href.charAt(0) === '#') {
-            event.preventDefault();
-            handleLink(link);
-          }
+          event.preventDefault();
+          handleLink(link);
         });
       });
 
       if (logo) {
         logo.addEventListener('click', function (event) {
           event.preventDefault();
-          history.pushState({ view: 'home' }, '', '#home');
-          showHome();
+          setView('home', true);
         });
       }
 
-      if (mobileToggle) {
+      if (mobileToggle && mobileMenu) {
         mobileToggle.addEventListener('click', function () {
           const isOpen = mobileToggle.getAttribute('aria-expanded') === 'true';
           mobileToggle.setAttribute('aria-expanded', String(!isOpen));
@@ -938,28 +925,14 @@
 
       window.addEventListener('popstate', function () {
         const id = window.location.hash.slice(1);
-
-        if (id && document.getElementById(id) && document.getElementById(id).classList.contains('site-view')) {
-          document.body.classList.add('view-mode');
-          document.body.classList.remove('view-home');
-          closeMobileMenu();
-          window.scrollTo({ top: 0, behavior: 'auto' });
-        } else if (id === 'events' || id === 'contact') {
-          showHome(id);
-        } else {
-          showHome();
-        }
+        setView(viewIds.includes(id) || homeIds.includes(id) ? id : 'home', false);
       });
 
       const initialId = window.location.hash.slice(1);
-      if (initialId && document.getElementById(initialId) && document.getElementById(initialId).classList.contains('site-view')) {
-        document.body.classList.add('view-mode');
-        document.body.classList.remove('view-home');
-      } else if (initialId === 'events' || initialId === 'contact') {
-        showHome(initialId);
-      } else {
-        document.body.classList.add('view-home');
-      }
+      setView(
+        viewIds.includes(initialId) || homeIds.includes(initialId) ? initialId : 'home',
+        false
+      );
     })();
   </script>
 
