@@ -1196,8 +1196,10 @@ body.view-mode .site-view .section-content {
 
   .hero,
   .image-section,
-  .theoutsidub-section {
-    background-attachment: scroll;
+  .theoutsidub-section,
+  .events-section,
+  .contact-section {
+    background-attachment: fixed;
   }
 
 
