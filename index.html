@@ -817,30 +817,6 @@
 
 
   <script>
-    const menuToggle = document.querySelector(".mobile-menu-toggle");
-    const mobileMenu = document.querySelector(".mobile-menu");
-
-    menuToggle.addEventListener("click", () => {
-      const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
-
-      menuToggle.setAttribute("aria-expanded", String(!isOpen));
-      mobileMenu.setAttribute("aria-hidden", String(isOpen));
-      mobileMenu.classList.toggle("is-open", !isOpen);
-      document.body.classList.toggle("menu-open", !isOpen);
-    });
-
-    mobileMenu.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        menuToggle.setAttribute("aria-expanded", "false");
-        mobileMenu.setAttribute("aria-hidden", "true");
-        mobileMenu.classList.remove("is-open");
-        document.body.classList.remove("menu-open");
-      });
-    });
-  </script>
-
-
-  <script>
     (function () {
       const viewIds = ['music', 'live-dub', 'releases', 'theoutsidub', 'archive'];
       const homeIds = ['events', 'contact'];
@@ -854,14 +830,14 @@
         mobileToggle.setAttribute('aria-expanded', 'false');
         mobileMenu.setAttribute('aria-hidden', 'true');
         mobileMenu.classList.remove('is-open');
+        document.body.classList.remove('menu-open');
       }
 
       function setView(viewId, updateUrl) {
         const isSectionView = viewIds.includes(viewId);
-        const isHomeTarget = homeIds.includes(viewId);
 
         document.querySelectorAll('.site-view').forEach(function (section) {
-          section.hidden = !isSectionView || section.id !== viewId;
+          section.hidden = !(isSectionView && section.id === viewId);
         });
 
         document.querySelectorAll('.home-view').forEach(function (section) {
@@ -875,11 +851,14 @@
         window.scrollTo(0, 0);
 
         if (updateUrl) {
-          const hash = viewId ? '#' + viewId : '#home';
-          history.pushState({ view: viewId || 'home' }, '', hash);
+          history.pushState(
+            { view: viewId || 'home' },
+            '',
+            viewId ? '#' + viewId : '#home'
+          );
         }
 
-        if (isHomeTarget) {
+        if (homeIds.includes(viewId)) {
           requestAnimationFrame(function () {
             const target = document.getElementById(viewId);
             if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -887,15 +866,8 @@
         }
       }
 
-      function handleLink(link) {
-        const href = link.getAttribute('href');
-        if (!href || href.charAt(0) !== '#') return;
-
-        const id = href.slice(1);
-
-        if (viewIds.includes(id)) {
-          setView(id, true);
-        } else if (homeIds.includes(id)) {
+      function navigateTo(id) {
+        if (viewIds.includes(id) || homeIds.includes(id)) {
           setView(id, true);
         } else {
           setView('home', true);
@@ -905,7 +877,8 @@
       allLinks.forEach(function (link) {
         link.addEventListener('click', function (event) {
           event.preventDefault();
-          handleLink(link);
+          const href = link.getAttribute('href') || '';
+          navigateTo(href.startsWith('#') ? href.slice(1) : 'home');
         });
       });
 
@@ -922,22 +895,27 @@
           mobileToggle.setAttribute('aria-expanded', String(!isOpen));
           mobileMenu.setAttribute('aria-hidden', String(isOpen));
           mobileMenu.classList.toggle('is-open', !isOpen);
+          document.body.classList.toggle('menu-open', !isOpen);
         });
       }
 
       window.addEventListener('popstate', function () {
         const id = window.location.hash.slice(1);
-        setView(viewIds.includes(id) || homeIds.includes(id) ? id : 'home', false);
+        if (viewIds.includes(id) || homeIds.includes(id)) {
+          setView(id, false);
+        } else {
+          setView('home', false);
+        }
       });
 
       const initialId = window.location.hash.slice(1);
-      setView(
-        viewIds.includes(initialId) || homeIds.includes(initialId) ? initialId : 'home',
-        false
-      );
+      if (viewIds.includes(initialId) || homeIds.includes(initialId)) {
+        setView(initialId, false);
+      } else {
+        setView('home', false);
+      }
     })();
   </script>
-
 </body>
 
 </html>
