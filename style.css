@@ -1551,7 +1551,8 @@ body.view-mode .site-view .section-content {
   align-items: center;
   justify-content: center;
   gap: 12px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  white-space: nowrap;
 }
 
 .footer-brand img {
