@@ -1543,3 +1543,33 @@ body.view-mode .site-view .section-content {
   }
 
 }
+
+
+/* FOOTER BRAND */
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-brand img {
+  display: block;
+  width: auto;
+  height: 24px;
+  max-width: 48px;
+  object-fit: contain;
+  filter: invert(1);
+}
+
+@media (max-width: 700px) {
+  .footer-brand {
+    gap: 9px;
+  }
+
+  .footer-brand img {
+    height: 20px;
+    max-width: 40px;
+  }
+}
