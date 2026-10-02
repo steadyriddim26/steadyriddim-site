@@ -69,15 +69,14 @@ body.view-mode .site-view .section-content { min-height: 100vh; }
   margin-top: -1px;
   margin-bottom: 0;
 }
-.outsidub-season-location { margin-top: 1.8em; margin-bottom: 0; font-family: "Road Rage", "Bebas Neue", Impact, sans-serif; font-size: clamp(38px, 5.5vw, 75px); line-height: .82; text-transform: uppercase; color: #fff; }
+.outsidub-season-location { margin-top: 25px; margin-bottom: 0; font-family: "Road Rage", "Bebas Neue", Impact, sans-serif; font-size: clamp(38px, 5.5vw, 75px); line-height: .82; text-transform: uppercase; color: #fff; }
 .outsidub-chapter {
+  max-width: 560px;
   margin-top: 32px;
-  margin-bottom: -20px;
-  font-family: "Road Rage", "Bebas Neue", Impact, sans-serif;
-  font-size: clamp(28px, 3.8vw, 52px);
-  line-height: .9;
-  text-transform: uppercase;
-  color: #fff;
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255,255,255,.85);
 }
 .outsidub-video { position: relative; width: 100%; max-width: 700px; margin-top: 45px; aspect-ratio: 16/9; background: #000; border: 1px solid rgba(255,255,255,.20); overflow: hidden; box-shadow: 0 25px 70px rgba(0,0,0,.60); }
 .outsidub-video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
