@@ -59,6 +59,9 @@ body.view-mode .site-view .section-content { min-height: 100vh; }
 .bandcamp-link:hover { color: #d62f4a; opacity: 1; }
 .theoutsidub-section { position: relative; min-height: 100vh; display: flex; align-items: center; background-image: url("images/outsidub.jpeg"); background-size: cover; background-position: center; background-repeat: no-repeat; overflow: hidden; }
 .theoutsidub-section::before { content: ""; position: absolute; inset: 0; opacity: .08; background-image: repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(255,255,255,.2) 3px); }
+.outsidub-season-spacer {
+  height: 4em;
+}
 .outsidub-season-location { margin-top: -10px; margin-bottom: 0; font-family: "Road Rage", "Bebas Neue", Impact, sans-serif; font-size: clamp(38px, 5.5vw, 75px); line-height: .82; text-transform: uppercase; color: #fff; }
 .outsidub-video { position: relative; width: 100%; max-width: 700px; margin-top: 45px; aspect-ratio: 16/9; background: #000; border: 1px solid rgba(255,255,255,.20); overflow: hidden; box-shadow: 0 25px 70px rgba(0,0,0,.60); }
 .outsidub-video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
