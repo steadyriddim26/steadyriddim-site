@@ -82,6 +82,15 @@ body.view-mode .site-view .section-content { min-height: 100vh; }
   margin-top: 60px;
 }
 
+.outsidub-chapter-tight {
+  margin-top: 32px;
+  margin-bottom: 30px;
+}
+.outsidub-chapter-tight span {
+  display: block;
+  margin-top: -4px;
+}
+
 .outsidub-video { position: relative; width: 100%; max-width: 700px; margin-top: 45px; aspect-ratio: 16/9; background: #000; border: 1px solid rgba(255,255,255,.20); overflow: hidden; box-shadow: 0 25px 70px rgba(0,0,0,.60); }
 .outsidub-video iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 .archive-image-section { background-image: url("images/music.jpeg"); }
