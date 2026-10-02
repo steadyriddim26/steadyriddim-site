@@ -66,7 +66,7 @@ body.view-mode .site-view .section-content { min-height: 100vh; }
   margin-top: -2px;
   margin-bottom: 0;
 }
-.outsidub-season-location { margin-top: -10px; margin-bottom: 0; font-family: "Road Rage", "Bebas Neue", Impact, sans-serif; font-size: clamp(38px, 5.5vw, 75px); line-height: .82; text-transform: uppercase; color: #fff; }
+.outsidub-season-location { margin-top: 3.2em; margin-bottom: 0; font-family: "Road Rage", "Bebas Neue", Impact, sans-serif; font-size: clamp(38px, 5.5vw, 75px); line-height: .82; text-transform: uppercase; color: #fff; }
 .outsidub-chapter {
   margin-top: 32px;
   margin-bottom: -20px;
