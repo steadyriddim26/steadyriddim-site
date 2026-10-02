@@ -131,7 +131,7 @@ body.view-mode .site-view .section-content { min-height: 100vh; }
   .hero { min-height:100svh; background-position:center center; }
   .hero-content { padding:100px 25px 60px 25px; }
   .eyebrow { font-size:10px; letter-spacing:3px; margin-bottom:20px; }
-  .hero-text h1 { font-size:clamp(62px,18vw,110px); line-height:.82; transform:scaleX(1.18); transform-origin:left center; }
+  .hero-text h1 { font-size:clamp(62px,18vw,110px); line-height:.82; transform:scaleX(1.38); transform-origin:left center; }
   .hero-text .riddim { color:#fff; -webkit-text-stroke:0; text-stroke:0; }
   .hero-description { font-size:11px; letter-spacing:2px; max-width:330px; }
   .image-section,.theoutsidub-section,.events-section,.contact-section { min-height:100svh; }
